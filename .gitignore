@@ -1,0 +1,19 @@
+# Backend (will be deployed separately)
+backend/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temp
+*.tmp

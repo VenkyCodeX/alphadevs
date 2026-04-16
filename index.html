@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlphaDevs | Elite Development Agency</title>
+  <meta name="description" content="AlphaDevs - Elite software development agency building next-generation digital products. Web, Mobile, AI & Cloud Solutions." />
+  <meta name="keywords" content="AlphaDevs, Software Development, Web Development, Mobile Apps, AI Solutions, Cloud Services" />
+  <meta name="author" content="AlphaDevs" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <meta property="og:title" content="AlphaDevs | Elite Development Agency" />
+  <meta property="og:description" content="Building next-generation digital products. Web, Mobile & AI solutions by Venkat Makkalwar." />
+  <meta property="og:image" content="images/VenkysIMG.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alphadevs.in" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AlphaDevs | Elite Development Agency" />
+  <meta name="twitter:description" content="Building next-generation digital products." />
+  <meta name="twitter:image" content="images/VenkysIMG.jpeg" />
+  <link rel="icon" type="image/png" href="images/VenkysLogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">α</div>
+      <div class="loader-text">AlphaDevs</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- FLOATING CTA -->
+  <a href="#contact" class="float-cta" aria-label="Start a project">
+    <i class="fa-solid fa-rocket"></i>
+    <span>Start Project</span>
+  </a>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-alpha">α</span><span class="logo-text">Alpha<span class="logo-accent">Devs</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="nav-cta">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-aurora">
+        <div class="aurora-1"></div>
+        <div class="aurora-2"></div>
+        <div class="aurora-3"></div>
+      </div>
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span>Available for New Projects</span>
+      </div>
+
+      <h1 class="hero-title reveal">
+        <span class="title-line">We Build</span>
+        <span class="title-line gradient-text">Next-Gen Products</span>
+      </h1>
+
+      <div class="hero-typing reveal">
+        <span class="typing-label">I specialize in:</span>
+        <span class="typing-text" id="typed-text"></span><span class="cursor">|</span>
+      </div>
+
+      <p class="hero-desc reveal">
+        Transform your vision into reality with cutting-edge technology.
+        We craft scalable web apps, mobile solutions, and AI-powered platforms
+        that drive measurable business growth.
+      </p>
+
+      <div class="hero-buttons reveal">
+        <a href="#contact" class="btn-primary btn-lg">
+          <span>Start Your Project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#projects" class="btn-secondary btn-lg">
+          <span>View Our Work</span>
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+          <span class="stat-value">10+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">8+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">2+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-content">
+        <span>Scroll to explore</span>
+        <div class="scroll-animation"><div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TOOLS I USE ========== -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Workflow</span>
+        <h2 class="section-title glitch" data-text="Tools I Use">Tools I <span class="gradient-text">Use</span></h2>
+        <p class="section-sub">The everyday tools that power my development workflow</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#007ACC"><i class="fa-solid fa-code"></i></div>
+          <span>VS Code</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#F24E1E"><i class="fa-brands fa-figma"></i></div>
+          <span>Figma</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#FF6C37"><i class="fa-solid fa-satellite-dish"></i></div>
+          <span>Postman</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#f0f0f0"><i class="fa-brands fa-github"></i></div>
+          <span>GitHub</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#000000"><i class="fa-solid fa-triangle"></i></div>
+          <span>Vercel</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#4285F4"><i class="fa-brands fa-chrome"></i></div>
+          <span>Chrome DevTools</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#3ECF8E"><i class="fa-solid fa-database"></i></div>
+          <span>Supabase</span>
+        </div>
+        <div class="tool-card reveal-scale">
+          <div class="tool-icon" style="color:#47A248"><i class="fa-solid fa-leaf"></i></div>
+          <span>MongoDB Atlas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section id="tech">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Technologies</span>
+        <h2 class="section-title glitch" data-text="Tech Stack">Tech <span class="gradient-text">Stack</span></h2>
+        <p class="section-sub">The full stack I use to design, build, and ship products end-to-end</p>
+      </div>
+
+      <div class="tech-stack-tabs reveal">
+        <button class="tech-tab active" data-tab="frontend">Frontend</button>
+        <button class="tech-tab" data-tab="backend">Backend</button>
+        <button class="tech-tab" data-tab="database">Database</button>
+        <button class="tech-tab" data-tab="devops">DevOps &amp; Tools</button>
+        <button class="tech-tab" data-tab="design">Design</button>
+      </div>
+
+      <div class="tech-panel active" id="tech-frontend">
+        <div class="tech-grid">
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-html5" style="color:#E34F26"></i><h4>HTML5</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-css3-alt" style="color:#1572B6"></i><h4>CSS3</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-js" style="color:#F7DF1E"></i><h4>JavaScript</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-react" style="color:#61DAFB"></i><h4>React</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-n" style="color:#ffffff"></i><h4>Next.js</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-bootstrap" style="color:#7952B3"></i><h4>Bootstrap</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-wind" style="color:#38BDF8"></i><h4>Tailwind CSS</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-mobile-screen" style="color:#00D4FF"></i><h4>Responsive Design</h4></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="tech-backend">
+        <div class="tech-grid">
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-node-js" style="color:#339933"></i><h4>Node.js</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-server" style="color:#00D4FF"></i><h4>Express.js</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-python" style="color:#3776AB"></i><h4>Python</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-fire" style="color:#FF6B35"></i><h4>REST APIs</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-bolt" style="color:#E535AB"></i><h4>GraphQL</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-shield-halved" style="color:#10B981"></i><h4>JWT Auth</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-envelope" style="color:#F59E0B"></i><h4>EmailJS</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-plug" style="color:#7C3AED"></i><h4>WebSockets</h4></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="tech-database">
+        <div class="tech-grid">
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-leaf" style="color:#47A248"></i><h4>MongoDB</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-database" style="color:#336791"></i><h4>PostgreSQL</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-database" style="color:#00758F"></i><h4>MySQL</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-database" style="color:#3ECF8E"></i><h4>Supabase</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-fire" style="color:#FFCA28"></i><h4>Firebase</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-bolt" style="color:#DC382D"></i><h4>Redis</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-cloud" style="color:#00D4FF"></i><h4>MongoDB Atlas</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-table" style="color:#10B981"></i><h4>Prisma ORM</h4></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="tech-devops">
+        <div class="tech-grid">
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-github" style="color:#f0f0f0"></i><h4>GitHub</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-git-alt" style="color:#F05032"></i><h4>Git</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-docker" style="color:#2496ED"></i><h4>Docker</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-aws" style="color:#FF9900"></i><h4>AWS</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-triangle" style="color:#ffffff"></i><h4>Vercel</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-satellite-dish" style="color:#FF6C37"></i><h4>Postman</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-chrome" style="color:#4285F4"></i><h4>DevTools</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-code" style="color:#007ACC"></i><h4>VS Code</h4></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="tech-design">
+        <div class="tech-grid">
+          <div class="tech-card reveal-scale"><i class="fa-brands fa-figma" style="color:#F24E1E"></i><h4>Figma</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-pen-ruler" style="color:#7C3AED"></i><h4>UI/UX Design</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-layer-group" style="color:#00D4FF"></i><h4>Design Systems</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-wand-magic-sparkles" style="color:#F59E0B"></i><h4>Prototyping</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-palette" style="color:#EC4899"></i><h4>Brand Identity</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-mobile-screen-button" style="color:#10B981"></i><h4>Mobile-First</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-universal-access" style="color:#6366F1"></i><h4>Accessibility</h4></div>
+          <div class="tech-card reveal-scale"><i class="fa-solid fa-magnifying-glass" style="color:#F97316"></i><h4>SEO</h4></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title glitch" data-text="Certifications">My <span class="gradient-text">Certifications</span></h2>
+        <p class="section-sub">Verified skills and completed learning paths</p>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon" style="color:#4285F4"><i class="fa-brands fa-google"></i></div>
+          <div class="cert-info">
+            <h4>Google — Foundations of UX Design</h4>
+            <span>Coursera &middot; 2024</span>
+          </div>
+          <a href="https://www.coursera.org/account/accomplishments" target="_blank" class="cert-badge">Verified</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon" style="color:#0A66C2"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="cert-info">
+            <h4>JavaScript Essentials</h4>
+            <span>LinkedIn Learning &middot; 2023</span>
+          </div>
+          <a href="https://www.linkedin.com/in/venkat-makkalwar-14b628286/" target="_blank" class="cert-badge">Verified</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon" style="color:#F05032"><i class="fa-brands fa-git-alt"></i></div>
+          <div class="cert-info">
+            <h4>Git &amp; GitHub Complete Guide</h4>
+            <span>Udemy &middot; 2023</span>
+          </div>
+          <a href="https://www.udemy.com/certificate" target="_blank" class="cert-badge">Verified</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon" style="color:#61DAFB"><i class="fa-brands fa-react"></i></div>
+          <div class="cert-info">
+            <h4>React — The Complete Guide</h4>
+            <span>Udemy &middot; 2024</span>
+          </div>
+          <a href="https://www.udemy.com/certificate" target="_blank" class="cert-badge">Verified</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title glitch" data-text="Our Process">Our <span class="gradient-text">Process</span></h2>
+        <p class="section-sub">A proven methodology to deliver exceptional results</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step reveal-left">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Discovery</h3>
+            <p>We dive deep into your business goals, target audience, and project requirements to create a solid foundation.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-right">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Design</h3>
+            <p>Our designers craft beautiful, intuitive interfaces that align with your brand and delight your users.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-left">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Development</h3>
+            <p>We build scalable, high-performance solutions using cutting-edge technologies and best practices.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-right">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Launch & Support</h3>
+            <p>We deploy your product and provide ongoing support to ensure long-term success and growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAM ========== -->
+  <section id="team">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Person Behind It</span>
+        <h2 class="section-title glitch" data-text="Meet The Founder">Meet The <span class="gradient-text">Founder</span></h2>
+        <p class="section-sub">One developer. Full ownership. Zero middlemen.</p>
+      </div>
+      <div class="solo-founder reveal">
+        <div class="solo-avatar">
+          <img src="images/VenkysIMG.jpeg" alt="Venkat Makkalwar" />
+        </div>
+        <div class="solo-info">
+          <h3>Venkat Makkalwar</h3>
+          <p class="solo-role">Founder &amp; Full-Stack Developer</p>
+          <p class="solo-bio">I'm the person behind AlphaDevs — handling everything from UI/UX design and frontend development to backend architecture and deployment. I work closely with every client to deliver clean, performant, and scalable digital products.</p>
+          <div class="solo-highlights">
+            <div class="solo-highlight">
+              <i class="fa-solid fa-code"></i>
+              <span>Full-Stack Development</span>
+            </div>
+            <div class="solo-highlight">
+              <i class="fa-solid fa-pen-ruler"></i>
+              <span>UI/UX Design</span>
+            </div>
+            <div class="solo-highlight">
+              <i class="fa-solid fa-server"></i>
+              <span>Backend &amp; APIs</span>
+            </div>
+            <div class="solo-highlight">
+              <i class="fa-solid fa-cloud"></i>
+              <span>Cloud Deployment</span>
+            </div>
+          </div>
+          <div class="solo-socials">
+            <a href="https://github.com/VenkyCodeX" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/venkat-makkalwar-14b628286/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/venky_makkalwar/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CASE STUDIES ========== -->
+  <section id="casestudies">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Success Stories</span>
+        <h2 class="section-title glitch" data-text="Case Studies">Case <span class="gradient-text">Studies</span></h2>
+        <p class="section-sub">Real results from real projects</p>
+      </div>
+      <div class="casestudies-grid">
+        <div class="case-card reveal">
+          <div class="case-icon"><i class="fa-solid fa-motorcycle"></i></div>
+          <h3>Bike Rental Platform</h3>
+          <div class="case-stats">
+            <div class="case-stat">
+              <span class="stat-num">300%</span>
+              <span class="stat-label">Booking Increase</span>
+            </div>
+            <div class="case-stat">
+              <span class="stat-num">50K+</span>
+              <span class="stat-label">Monthly Users</span>
+            </div>
+          </div>
+          <p>Built a multi-vendor bike rental platform that increased bookings by 300% in 6 months.</p>
+          <a href="#" class="case-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title glitch" data-text="My Services">My <span class="gradient-text">Services</span></h2>
+        <p class="section-sub">End-to-end digital solutions for your business</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-scale">
+          <div class="service-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>Website Development</h3>
+          <p>Custom, responsive websites built with modern technologies. Fast, secure, and optimized for performance.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> React / Next.js</li>
+            <li><i class="fa-solid fa-check"></i> Node.js Backend</li>
+            <li><i class="fa-solid fa-check"></i> REST APIs</li>
+          </ul>
+          <div class="service-number">01</div>
+        </div>
+        <div class="service-card reveal-scale">
+          <div class="service-icon">
+            <i class="fa-solid fa-store"></i>
+          </div>
+          <h3>Business Websites</h3>
+          <p>Professional business websites that convert visitors into customers. SEO-optimized and mobile-first.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Landing Pages</li>
+            <li><i class="fa-solid fa-check"></i> E-commerce</li>
+            <li><i class="fa-solid fa-check"></i> SEO Optimization</li>
+          </ul>
+          <div class="service-number">02</div>
+        </div>
+        <div class="service-card reveal-scale">
+          <div class="service-icon">
+            <i class="fa-solid fa-pen-ruler"></i>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive interfaces designed with user experience at the core. From wireframes to final design.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Figma Design</li>
+            <li><i class="fa-solid fa-check"></i> Prototyping</li>
+            <li><i class="fa-solid fa-check"></i> Design Systems</li>
+          </ul>
+          <div class="service-number">03</div>
+        </div>
+        <div class="service-card reveal-scale">
+          <div class="service-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3>Startup MVP</h3>
+          <p>Turn your startup idea into a working product. Fast MVP development to validate your concept quickly.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Rapid Prototyping</li>
+            <li><i class="fa-solid fa-check"></i> Full Stack Dev</li>
+            <li><i class="fa-solid fa-check"></i> Launch Ready</li>
+          </ul>
+          <div class="service-number">04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title glitch" data-text="Featured Projects">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">Real projects built with passion and purpose</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card project-card--featured reveal">
+          <div class="project-badge project-badge--live">Live</div>
+          <div class="project-image">
+            <img src="images/addcar2.jpeg" alt="Bike Rental Hub" class="project-screenshot" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://bikerentalhub.co.in" target="_blank" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/VenkyCodeX" target="_blank" class="project-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <h3>Bike Rental Hub</h3>
+            <p>A multi-vendor bike rental platform with fleet listings, online booking, and location-based search — built for scale.</p>
+            <a href="https://bikerentalhub.co.in" target="_blank" class="project-cta">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-badge">Live</div>
+          <div class="project-image">
+            <img src="images/addcart.jpeg" alt="Sri Ganesh Bike Rental" class="project-screenshot" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://sriganeshbikerental.in" target="_blank" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/VenkyCodeX" target="_blank" class="project-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <h3>Sri Ganesh Bike Rental</h3>
+            <p>A complete business website for a local bike rental service with booking system, fleet showcase, and contact integration.</p>
+            <a href="https://sriganeshbikerental.in" target="_blank" class="project-cta">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-badge">Live</div>
+          <div class="project-image">
+            <img src="images/time_bar_overflow.jpeg" alt="Gaming Rental Hub" class="project-screenshot" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://gamingrentalhub.com" target="_blank" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/VenkyCodeX" target="_blank" class="project-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <h3>Gaming Rental Hub</h3>
+            <p>A gaming gear rental platform where users can browse, book, and rent consoles, controllers, and accessories online.</p>
+            <a href="https://gamingrentalhub.com" target="_blank" class="project-cta">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="projects-cta reveal">
+        <a href="https://github.com/VenkyCodeX" target="_blank" class="btn-secondary">
+          <i class="fa-brands fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS ========== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-number" data-target="8">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Cups of Coffee</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title glitch" data-text="What Clients Say">What Clients <span class="gradient-text">Say</span></h2>
+        <p class="section-sub">Real feedback from people I've worked with</p>
+      </div>
+
+      <!-- Add Review Button -->
+      <div class="reviews-action reveal">
+        <button class="btn-primary" id="openReviewModal">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>Write a Review</span>
+        </button>
+      </div>
+
+      <!-- Reviews Carousel -->
+      <div class="testimonials-carousel-wrap">
+        <div class="testimonials-grid" id="reviewsGrid">
+          <div class="reviews-loading">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            <span>Loading reviews...</span>
+          </div>
+        </div>
+        <div class="carousel-controls" id="carouselControls" style="display:none;">
+          <button class="carousel-btn" id="carouselPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" id="carouselNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="reviews-empty" id="reviewsEmpty" style="display:none;">
+        <i class="fa-regular fa-comment-dots"></i>
+        <p>No reviews yet. Be the first to share your experience!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REVIEW MODAL ========== -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeReviewModal" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3>Share Your Experience</h3>
+      <p>Your honest feedback means a lot!</p>
+      <form id="reviewForm">
+        <div class="form-group">
+          <input type="text" id="reviewName" placeholder="Your Name" required />
+          <i class="fa-solid fa-user form-icon"></i>
+        </div>
+        <div class="form-group">
+          <input type="text" id="reviewRole" placeholder="Your Role / Company" />
+          <i class="fa-solid fa-briefcase form-icon"></i>
+        </div>
+        <div class="form-group">
+          <textarea id="reviewMessage" rows="4" placeholder="Write your review..." required></textarea>
+          <i class="fa-solid fa-message form-icon textarea-icon"></i>
+        </div>
+        <div class="star-rating-wrap">
+          <span>Rating:</span>
+          <div class="star-rating" id="starRating">
+            <i class="fa-solid fa-star" data-value="1"></i>
+            <i class="fa-solid fa-star" data-value="2"></i>
+            <i class="fa-solid fa-star" data-value="3"></i>
+            <i class="fa-solid fa-star" data-value="4"></i>
+            <i class="fa-solid fa-star" data-value="5"></i>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary submit-btn" id="reviewSubmitBtn">
+          <span>Submit Review</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========== RECENT WORK UPDATES ========== -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What's New</span>
+        <h2 class="section-title glitch" data-text="Recent Updates">Recent <span class="gradient-text">Updates</span></h2>
+        <p class="section-sub">Latest work, launches, and milestones</p>
+      </div>
+      <div class="updates-timeline">
+        <div class="update-item reveal">
+          <div class="update-dot"></div>
+          <div class="update-card">
+            <div class="update-meta">
+              <span class="update-tag">Launch</span>
+              <span class="update-date"><i class="fa-regular fa-calendar"></i> Jan 2025</span>
+            </div>
+            <h3>BikeRentalHub.co.in went live</h3>
+            <p>Launched a full multi-vendor bike rental platform with booking system, fleet management, and location-based search.</p>
+            <a href="https://bikerentalhub.co.in" target="_blank" class="update-link">Visit site <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="update-item reveal">
+          <div class="update-dot"></div>
+          <div class="update-card">
+            <div class="update-meta">
+              <span class="update-tag">Launch</span>
+              <span class="update-date"><i class="fa-regular fa-calendar"></i> Dec 2024</span>
+            </div>
+            <h3>SriGaneshBikeRental.in delivered</h3>
+            <p>Completed a business website for a local bike rental service — booking system, fleet showcase, and WhatsApp integration.</p>
+            <a href="https://sriganeshbikerental.in" target="_blank" class="update-link">Visit site <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="update-item reveal">
+          <div class="update-dot"></div>
+          <div class="update-card">
+            <div class="update-meta">
+              <span class="update-tag">Launch</span>
+              <span class="update-date"><i class="fa-regular fa-calendar"></i> Nov 2024</span>
+            </div>
+            <h3>GamingRentalHub.com shipped</h3>
+            <p>Built a gaming gear rental platform — browse, book, and rent consoles &amp; accessories online with a clean modern UI.</p>
+            <a href="https://gamingrentalhub.com" target="_blank" class="update-link">Visit site <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="update-item reveal">
+          <div class="update-dot"></div>
+          <div class="update-card">
+            <div class="update-meta">
+              <span class="update-tag">Open Source</span>
+              <span class="update-date"><i class="fa-regular fa-calendar"></i> Ongoing</span>
+            </div>
+            <h3>More projects on GitHub</h3>
+            <p>Actively building and pushing code. Check out my GitHub for experiments, tools, and side projects.</p>
+            <a href="https://github.com/VenkyCodeX" target="_blank" class="update-link">View GitHub <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title glitch" data-text="Common Questions">Common <span class="gradient-text">Questions</span></h2>
+        <p class="section-sub">Everything you need to know before reaching out</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>How long does a project take?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>It depends on the scope. A landing page takes 1–2 weeks. A full business website takes 3–4 weeks. A full-stack application or MVP typically takes 6–10 weeks. I'll give you a clear timeline after our initial call.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>What's your development process?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>I follow a 4-step process: Discovery (understanding your goals) → Design (wireframes & UI) → Development (building & testing) → Launch & Support (deployment + handoff). You're involved at every stage.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Do you offer maintenance after launch?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. I offer post-launch support for bug fixes, updates, and feature additions. Maintenance packages are available monthly or on a per-request basis depending on your needs.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>How do payments work?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>I typically work with a 50% upfront deposit and 50% on delivery. For larger projects, milestone-based payments can be arranged. I accept bank transfers, UPI, and international payments via PayPal.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Will I own the code after the project?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Once the project is fully paid, you own 100% of the source code, assets, and intellectual property. I'll hand over everything including the repository and deployment credentials.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Do you work with international clients?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, I work with clients globally. Communication is primarily via WhatsApp, email, or video calls. I'm flexible with time zones and ensure regular updates throughout the project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title glitch" data-text="Contact Me">Contact <span class="gradient-text">Me</span></h2>
+        <p class="section-sub">Have a project in mind? Let's build something great together.</p>
+      </div>
+
+      <!-- Open to Work Card -->
+      <div class="open-to-work reveal">
+        <div class="otw-status">
+          <span class="otw-dot"></span>
+          <span>Open to Work</span>
+        </div>
+        <div class="otw-details">
+          <div class="otw-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div>
+              <span class="otw-label">Availability</span>
+              <span class="otw-value">Immediate</span>
+            </div>
+          </div>
+          <div class="otw-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <span class="otw-label">Response Time</span>
+              <span class="otw-value">Within 2 hours</span>
+            </div>
+          </div>
+          <div class="otw-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <span class="otw-label">Preferred Contact</span>
+              <span class="otw-value">WhatsApp / Email</span>
+            </div>
+          </div>
+          <div class="otw-item">
+            <i class="fa-solid fa-earth-asia"></i>
+            <div>
+              <span class="otw-label">Work Type</span>
+              <span class="otw-value">Remote &amp; On-site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Talk Business</h3>
+          <p>I'm currently available for freelance work and exciting full-time opportunities. If you have a project that needs some creative work, I'd love to hear about it.</p>
+          <p class="last-active"><i class="fa-solid fa-circle" style="color:#10b981;font-size:8px;"></i> Usually responds within 2 hours &mdash; last active today</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:vsmakkalvar@gmail.com">vsmakkalvar@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <span>WhatsApp</span>
+                <a href="https://wa.me/916300003773" target="_blank">+91 6300003773</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span>Location</span>
+                <a>Hyderabad, Telangana, India</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/VenkyCodeX" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/venkat-makkalwar-14b628286/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/venky_makkalwar/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/VMakkalwar40985" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100094862996593" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <a href="https://wa.me/916300003773?text=Hi%20Venkat%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form id="contactForm" name="submit-to-google-sheet">
+            <div class="form-group">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <i class="fa-solid fa-user form-icon"></i>
+            </div>
+            <div class="form-group">
+              <input type="email" name="Email" placeholder="Your Email" required />
+              <i class="fa-solid fa-envelope form-icon"></i>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Subject" placeholder="Subject" />
+              <i class="fa-solid fa-tag form-icon"></i>
+            </div>
+            <div class="form-group">
+              <textarea name="Message" rows="5" placeholder="Your Message..."></textarea>
+              <i class="fa-solid fa-message form-icon textarea-icon"></i>
+            </div>
+            <button type="submit" class="btn-primary submit-btn">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <span id="form-msg"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-alpha">α</span><span class="logo-text">Alpha<span class="logo-accent">Devs</span></span>
+        </a>
+        <p>Building next-generation digital products that drive business growth.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/VenkyCodeX" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/venkat-makkalwar-14b628286/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/venky_makkalwar/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/VMakkalwar40985" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="footer-cta-block">
+          <p class="footer-cta-text">Let's build something great together.</p>
+          <a href="#contact" class="btn-primary footer-cta-btn">
+            <i class="fa-solid fa-rocket"></i> Start a Project
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AlphaDevs. Crafted with <i class="fa-solid fa-heart"></i> by AlphaDevs Team. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span class="back-to-top-label">Top</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav">
+    <div class="mbn-pill" id="mbnPill"></div>
+    <a href="#hero" class="mbn-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#projects" class="mbn-item">
+      <i class="fa-solid fa-briefcase"></i>
+      <span>Work</span>
+    </a>
+    <a href="#services" class="mbn-item">
+      <i class="fa-solid fa-code"></i>
+      <span>Services</span>
+    </a>
+    <a href="#contact" class="mbn-item mbn-cta">
+      <i class="fa-solid fa-paper-plane"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/916300003773?text=Hi%20there%2C%20I%20came%20from%20your%20website%20AlphaDevs%20%E2%80%94%20I%27d%20like%20to%20discuss%20a%20project%20with%20you!" target="_blank" class="float-wa" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat with us</span>
+  </a>
+
+  <script src="reviews.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
