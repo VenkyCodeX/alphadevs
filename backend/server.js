@@ -24,6 +24,8 @@ app.use(cors({
     'http://localhost:5500',
     'http://127.0.0.1:3000',
     'http://localhost:3000',
+    'https://venkycodex.github.io',
+    'https://alphadevs.in',
   ].filter(Boolean),
   methods: ['GET', 'POST'],
   credentials: true,
