@@ -1,5 +1,9 @@
-# Backend (will be deployed separately)
-backend/
+# Claude AI workspace files
+.claude/
+
+# Backend (deployed separately on Render)
+backend/node_modules/
+backend/.env
 
 # IDE
 .vscode/
@@ -17,3 +21,4 @@ desktop.ini
 
 # Temp
 *.tmp
+')\
