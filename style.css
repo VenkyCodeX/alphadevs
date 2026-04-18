@@ -5431,3 +5431,36 @@ html[data-theme="light"] .tech-tab.active { color: #fff; }
   .float-wa:hover { width: 46px; border-radius: 50%; }
   .float-wa:hover span { max-width: 0; opacity: 0; padding-right: 0; }
 }
+
+/* ========== MOBILE BOTTOM NAV — ALWAYS VISIBLE ========== */
+.mobile-bottom-nav {
+  display: flex !important;
+}
+
+/* Add bottom padding to body always so content isn't hidden behind nav */
+body {
+  padding-bottom: calc(65px + env(safe-area-inset-bottom)) !important;
+}
+
+/* Hide float-cta on all screens since bottom nav is always shown */
+.float-cta { display: none !important; }
+
+/* ========== STATS MOBILE SIZE FIX ========== */
+@media (max-width: 768px) {
+  .stat-number { font-size: 28px !important; }
+  .stat-plus   { font-size: 20px !important; }
+  .stat-icon   { font-size: 28px !important; margin-bottom: 8px !important; }
+  .stat-label  { font-size: 11px !important; }
+  .stat-card   { padding: 20px 10px !important; }
+}
+
+@media (max-width: 480px) {
+  .stat-number { font-size: 22px !important; }
+  .stat-plus   { font-size: 16px !important; }
+  .stat-icon   { font-size: 22px !important; }
+  .stat-label  { font-size: 10px !important; }
+  .stat-card   { padding: 16px 8px !important; }
+}
+
+/* ========== HIDE REMOVED SECTIONS ========== */
+#tools, .float-wa, #pricing { display: none !important; }
