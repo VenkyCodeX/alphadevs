@@ -4897,3 +4897,537 @@ html[data-theme="light"] .tech-tab.active { color: #fff; }
     height: 240px;
   }
 }
+
+/* ========== PROJECTS SHOWCASE (favicon + ring) ========== */
+.projects-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 28px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item:hover {
+  border-color: var(--color-primary);
+  background: rgba(0,212,255,0.04);
+  transform: translateX(6px);
+  box-shadow: 0 8px 40px rgba(0,212,255,0.1);
+}
+
+/* Favicon wrap with spinning rings */
+.project-favicon-wrap {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.project-ring.ring-1 {
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid rgba(0,212,255,0.4);
+  animation: spin-ring 8s linear infinite;
+}
+
+.project-ring.ring-2 {
+  width: 80px;
+  height: 80px;
+  border: 1.5px dashed rgba(124,58,237,0.35);
+  animation: spin-ring 14s linear infinite reverse;
+}
+
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.project-item:hover .project-ring.ring-1 {
+  border-color: rgba(0,212,255,0.8);
+  animation-duration: 3s;
+}
+.project-item:hover .project-ring.ring-2 {
+  border-color: rgba(124,58,237,0.7);
+  animation-duration: 6s;
+}
+
+.project-favicon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-favicon { transform: scale(1.1); }
+
+.project-favicon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.project-favicon--icon i {
+  font-size: 22px;
+  color: var(--color-primary);
+}
+
+/* Project meta */
+.project-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.project-meta h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.project-item:hover .project-meta h3 { color: var(--color-primary); }
+
+.project-url {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
+
+.project-live-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  animation: badge-ping 2s ease-in-out infinite;
+  margin-bottom: 2px;
+}
+
+.project-live-dot.dot-wip {
+  background: #f59e0b;
+  animation: none;
+}
+
+.project-tech-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.project-tech-pills span {
+  padding: 2px 10px;
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 20px;
+  font-size: 11px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.project-arrow {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-item:hover .project-arrow {
+  color: var(--color-primary);
+  transform: translate(3px, -3px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .project-item { padding: 16px 18px; gap: 16px; }
+  .project-favicon-wrap { width: 52px; height: 52px; }
+  .project-ring.ring-1 { width: 52px; height: 52px; }
+  .project-ring.ring-2 { width: 66px; height: 66px; }
+  .project-favicon { width: 38px; height: 38px; }
+  .project-meta h3 { font-size: 14px; }
+  .project-item:hover { transform: none; }
+}
+
+/* ========== ORBITAL PROJECT SYSTEM ========== */
+.orbital-wrap {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: 0 auto 60px;
+}
+
+/* Static decorative rings */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.orbit-1 {
+  width: 360px; height: 360px;
+  border: 1.5px solid rgba(0,212,255,0.25);
+  animation: orbit-pulse 4s ease-in-out infinite;
+}
+.orbit-2 {
+  width: 300px; height: 300px;
+  border: 1px dashed rgba(124,58,237,0.2);
+  animation: orbit-pulse 4s ease-in-out infinite 1s;
+}
+.orbit-3 {
+  width: 240px; height: 240px;
+  border: 1px solid rgba(255,0,110,0.15);
+  animation: orbit-pulse 4s ease-in-out infinite 2s;
+}
+@keyframes orbit-pulse {
+  0%,100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+
+/* Center logo */
+.orbital-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,212,255,0.12), rgba(124,58,237,0.08));
+  border: 2px solid rgba(0,212,255,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  z-index: 10;
+  box-shadow: 0 0 30px rgba(0,212,255,0.2), inset 0 0 20px rgba(0,212,255,0.05);
+}
+.orbital-center .logo-alpha {
+  font-size: 32px;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.orbital-center-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Orbiting nodes */
+.orbit-node {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 56px; height: 56px;
+  margin: -28px 0 0 -28px;
+  text-decoration: none;
+  z-index: 20;
+  /* Each node orbits: translate to radius, then rotate around center */
+  animation: orbit-spin var(--duration, 18s) linear infinite;
+  transform-origin: 0 0;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(var(--angle, 0deg)) translateX(var(--orbit-r, 180px)) rotate(calc(-1 * var(--angle, 0deg))); }
+  to   { transform: rotate(calc(var(--angle, 0deg) + 360deg)) translateX(var(--orbit-r, 180px)) rotate(calc(-1 * (var(--angle, 0deg) + 360deg))); }
+}
+
+.orbit-node-inner {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(10,10,10,0.9);
+  border: 2px solid var(--color, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color, #00d4ff) 40%, transparent),
+              inset 0 0 10px color-mix(in srgb, var(--color, #00d4ff) 10%, transparent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.orbit-node-inner img {
+  width: 30px; height: 30px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.orbit-node-icon i {
+  font-size: 20px;
+  color: var(--color, #00d4ff);
+}
+
+/* Tooltip */
+.orbit-node-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10,10,10,0.95);
+  border: 1px solid var(--color, #00d4ff);
+  border-radius: 10px;
+  padding: 8px 14px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+  text-align: center;
+}
+.orbit-node-tooltip strong {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text);
+  font-weight: 700;
+}
+.orbit-node-tooltip span {
+  font-size: 10px;
+  color: var(--color, #00d4ff);
+  font-family: monospace;
+}
+
+.orbit-node:hover .orbit-node-tooltip { opacity: 1; }
+.orbit-node:hover .orbit-node-inner {
+  transform: scale(1.2);
+  box-shadow: 0 0 28px color-mix(in srgb, var(--color, #00d4ff) 70%, transparent);
+}
+
+/* Pause orbit on hover of the whole wrap */
+.orbital-wrap:hover .orbit-node { animation-play-state: paused; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orbital-wrap { width: 320px; height: 320px; }
+  .orbit-1 { width: 280px; height: 280px; }
+  .orbit-2 { width: 230px; height: 230px; }
+  .orbit-3 { width: 180px; height: 180px; }
+  .orbit-node { --orbit-r: 135px !important; }
+}
+@media (max-width: 480px) {
+  .orbital-wrap { width: 280px; height: 280px; }
+  .orbit-1 { width: 240px; height: 240px; }
+  .orbit-2 { width: 195px; height: 195px; }
+  .orbit-3 { width: 150px; height: 150px; }
+  .orbit-node { --orbit-r: 115px !important; width: 46px; height: 46px; margin: -23px 0 0 -23px; }
+  .orbit-node-inner { width: 46px; height: 46px; }
+  .orbital-center { width: 80px; height: 80px; }
+  .orbital-center .logo-alpha { font-size: 26px; }
+}
+
+/* ========== ORBITAL RADIUS RESPONSIVE FIX ========== */
+/* Override fixed --orbit-r per breakpoint so nodes never clip */
+@media (max-width: 768px) {
+  .orbit-node {
+    --orbit-r: 130px !important;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+  }
+  .orbit-node-inner { width: 50px; height: 50px; }
+  .orbit-node-inner img { width: 26px; height: 26px; }
+}
+
+@media (max-width: 480px) {
+  .orbital-wrap { width: 260px; height: 260px; }
+  .orbit-1 { width: 220px; height: 220px; }
+  .orbit-2 { width: 178px; height: 178px; }
+  .orbit-3 { width: 136px; height: 136px; }
+  .orbit-node {
+    --orbit-r: 105px !important;
+    width: 42px;
+    height: 42px;
+    margin: -21px 0 0 -21px;
+  }
+  .orbit-node-inner { width: 42px; height: 42px; }
+  .orbit-node-inner img { width: 22px; height: 22px; }
+  .orbital-center { width: 72px; height: 72px; }
+  .orbital-center .logo-alpha { font-size: 22px; }
+  .orbital-center-label { font-size: 7px; }
+  /* Hide tooltip on mobile — too small to show */
+  .orbit-node-tooltip { display: none; }
+}
+
+@media (max-width: 360px) {
+  .orbital-wrap { width: 230px; height: 230px; }
+  .orbit-1 { width: 196px; height: 196px; }
+  .orbit-2 { width: 158px; height: 158px; }
+  .orbit-3 { width: 120px; height: 120px; }
+  .orbit-node { --orbit-r: 92px !important; }
+}
+
+/* ========== FLOATING WHATSAPP BUTTON ========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== CURRENCY SWITCH ========== */
+.currency-switch {
+  display: flex;
+  gap: 4px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.currency-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.currency-btn.active {
+  background: var(--gradient-primary);
+  color: var(--color-dark);
+}
+
+/* ========== PRICING TOGGLE ROW ========== */
+.pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* ========== FLOATING WHATSAPP — FIXED ========== */
+.float-wa {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  z-index: 998;
+  display: inline-flex;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  background: #25d366;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.float-wa i {
+  font-size: 26px;
+  min-width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.float-wa span {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+.float-wa:hover {
+  width: auto;
+  border-radius: 26px;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.6);
+}
+.float-wa:hover span { max-width: 140px; opacity: 1; padding-right: 16px; }
+
+@media (max-width: 768px) {
+  .float-wa { bottom: 80px; right: 12px; width: 46px; height: 46px; }
+  .float-wa i { min-width: 46px; height: 46px; font-size: 22px; }
+  .float-wa:hover { width: 46px; border-radius: 50%; }
+  .float-wa:hover span { max-width: 0; opacity: 0; padding-right: 0; }
+}

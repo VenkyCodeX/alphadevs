@@ -766,9 +766,9 @@ console.log('🚀 AlphaDevs — Building next-gen digital products.');
 
   function updatePrices() {
     const period = isMonthly ? 'monthly' : 'onetime';
-    const currency = isINR ? 'inr' : 'usd';
+    const currency = isINR ? 'Inr' : 'Usd';
     document.querySelectorAll('.price-val').forEach(el => {
-      el.textContent = el.dataset[period + currency.charAt(0).toUpperCase() + currency.slice(1)];
+      el.textContent = el.dataset[period + currency];
     });
     document.querySelectorAll('.price-symbol').forEach(el => {
       el.textContent = isINR ? '\u20b9' : '$';

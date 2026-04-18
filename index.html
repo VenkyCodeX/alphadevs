@@ -7,10 +7,10 @@
   <meta name="description" content="AlphaDevs - Elite software development agency building next-generation digital products. Web, Mobile, AI & Cloud Solutions." />
   <meta name="keywords" content="AlphaDevs, Software Development, Web Development, Mobile Apps, AI Solutions, Cloud Services" />
   <meta name="author" content="AlphaDevs" />
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous"></script>
   <meta property="og:title" content="AlphaDevs | Elite Development Agency" />
   <meta property="og:description" content="Building next-generation digital products. Web, Mobile & AI solutions by Venkat Makkalwar." />
-  <meta property="og:image" content="images/VenkysIMG.jpeg" />
+  <meta property="og:image" content="images/og-banner.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AlphaDevs | Elite Development Agency" />
   <meta name="twitter:description" content="Building next-generation digital products." />
-  <meta name="twitter:image" content="images/VenkysIMG.jpeg" />
+  <meta name="twitter:image" content="images/og-banner.jpg" />
   <link rel="icon" type="image/png" href="images/VenkysLogo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -276,50 +276,6 @@
     </div>
   </section>
 
-  <!-- ========== CERTIFICATIONS ========== -->
-  <section id="certifications">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Credentials</span>
-        <h2 class="section-title glitch" data-text="Certifications">My <span class="gradient-text">Certifications</span></h2>
-        <p class="section-sub">Verified skills and completed learning paths</p>
-      </div>
-      <div class="certs-grid">
-        <div class="cert-card reveal">
-          <div class="cert-icon" style="color:#4285F4"><i class="fa-brands fa-google"></i></div>
-          <div class="cert-info">
-            <h4>Google — Foundations of UX Design</h4>
-            <span>Coursera &middot; 2024</span>
-          </div>
-          <a href="https://www.coursera.org/account/accomplishments" target="_blank" class="cert-badge">Verified</a>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon" style="color:#0A66C2"><i class="fa-brands fa-linkedin"></i></div>
-          <div class="cert-info">
-            <h4>JavaScript Essentials</h4>
-            <span>LinkedIn Learning &middot; 2023</span>
-          </div>
-          <a href="https://www.linkedin.com/in/venkat-makkalwar-14b628286/" target="_blank" class="cert-badge">Verified</a>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon" style="color:#F05032"><i class="fa-brands fa-git-alt"></i></div>
-          <div class="cert-info">
-            <h4>Git &amp; GitHub Complete Guide</h4>
-            <span>Udemy &middot; 2023</span>
-          </div>
-          <a href="https://www.udemy.com/certificate" target="_blank" class="cert-badge">Verified</a>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-icon" style="color:#61DAFB"><i class="fa-brands fa-react"></i></div>
-          <div class="cert-info">
-            <h4>React — The Complete Guide</h4>
-            <span>Udemy &middot; 2024</span>
-          </div>
-          <a href="https://www.udemy.com/certificate" target="_blank" class="cert-badge">Verified</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========== PROCESS ========== -->
   <section id="process">
@@ -435,6 +391,73 @@
     </div>
   </section>
 
+  <!-- ========== PRICING ========== -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Flexible Plans</span>
+        <h2 class="section-title glitch" data-text="Pricing">Pricing <span class="gradient-text">Plans</span></h2>
+        <p class="section-sub">Choose the perfect plan for your project</p>
+      </div>
+      <div class="pricing-toggle reveal">
+        <div class="currency-switch">
+          <button class="currency-btn active" id="currencyUSD">$ USD</button>
+          <button class="currency-btn" id="currencyINR">&#8377; INR</button>
+        </div>
+        <span class="toggle-label active-label" id="toggleLabelOne">One-Time</span>
+        <button class="toggle-switch" id="pricingToggle" aria-label="Toggle pricing">
+          <span class="toggle-thumb"></span>
+        </button>
+        <span class="toggle-label" id="toggleLabelMonthly">Monthly</span>
+        <span class="toggle-save">Save 20%</span>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal-scale">
+          <h3>Starter</h3>
+          <div class="price"><span class="price-symbol">$</span><span class="price-val" data-onetimeusd="2,999" data-monthlyusd="299" data-onetimeinr="24,999" data-monthlyinr="2,499">2,999</span></div>
+          <p class="price-desc">Perfect for small projects</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Landing Page Design</li>
+            <li><i class="fa-solid fa-check"></i> Responsive Development</li>
+            <li><i class="fa-solid fa-check"></i> Basic SEO</li>
+            <li><i class="fa-solid fa-check"></i> 2 Revisions</li>
+            <li><i class="fa-solid fa-check"></i> 2 Weeks Delivery</li>
+          </ul>
+          <a href="#contact" class="btn-secondary">Get Started</a>
+        </div>
+        <div class="pricing-card featured reveal-scale">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Professional</h3>
+          <div class="price"><span class="price-symbol">$</span><span class="price-val" data-onetimeusd="7,999" data-monthlyusd="699" data-onetimeinr="64,999" data-monthlyinr="5,999">7,999</span></div>
+          <p class="price-desc">For growing businesses</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Full Website (5-10 pages)</li>
+            <li><i class="fa-solid fa-check"></i> Custom Design</li>
+            <li><i class="fa-solid fa-check"></i> CMS Integration</li>
+            <li><i class="fa-solid fa-check"></i> Advanced SEO</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited Revisions</li>
+            <li><i class="fa-solid fa-check"></i> 4 Weeks Delivery</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Get Started</a>
+        </div>
+        <div class="pricing-card reveal-scale">
+          <h3>Enterprise</h3>
+          <div class="price"><span class="price-symbol">$</span><span class="price-val" data-onetimeusd="15,999" data-monthlyusd="1,399" data-onetimeinr="1,29,999" data-monthlyinr="11,999">15,999</span><span class="plus">+</span></div>
+          <p class="price-desc">For complex applications</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Full-Stack Application</li>
+            <li><i class="fa-solid fa-check"></i> Custom Backend</li>
+            <li><i class="fa-solid fa-check"></i> Database Design</li>
+            <li><i class="fa-solid fa-check"></i> API Development</li>
+            <li><i class="fa-solid fa-check"></i> Cloud Deployment</li>
+            <li><i class="fa-solid fa-check"></i> Ongoing Support</li>
+          </ul>
+          <a href="#contact" class="btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== SERVICES ========== -->
   <section id="services">
     <div class="container">
@@ -508,68 +531,71 @@
         <h2 class="section-title glitch" data-text="Featured Projects">Featured <span class="gradient-text">Projects</span></h2>
         <p class="section-sub">Real projects built with passion and purpose</p>
       </div>
-      <div class="projects-grid">
 
-        <div class="project-card project-card--featured reveal">
-          <div class="project-badge project-badge--live">Live</div>
-          <div class="project-image">
-            <img src="images/addcar2.jpeg" alt="Bike Rental Hub" class="project-screenshot" loading="lazy" />
-            <div class="project-overlay">
-              <a href="https://bikerentalhub.co.in" target="_blank" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/VenkyCodeX" target="_blank" class="project-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <h3>Bike Rental Hub</h3>
-            <p>A multi-vendor bike rental platform with fleet listings, online booking, and location-based search — built for scale.</p>
-            <a href="https://bikerentalhub.co.in" target="_blank" class="project-cta">View Project <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
+      <div class="orbital-wrap reveal">
+        <!-- Center logo -->
+        <div class="orbital-center">
+          <span class="logo-alpha">α</span>
+          <span class="orbital-center-label">AlphaDevs</span>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-badge">Live</div>
-          <div class="project-image">
-            <img src="images/addcart.jpeg" alt="Sri Ganesh Bike Rental" class="project-screenshot" loading="lazy" />
-            <div class="project-overlay">
-              <a href="https://sriganeshbikerental.in" target="_blank" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/VenkyCodeX" target="_blank" class="project-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <h3>Sri Ganesh Bike Rental</h3>
-            <p>A complete business website for a local bike rental service with booking system, fleet showcase, and contact integration.</p>
-            <a href="https://sriganeshbikerental.in" target="_blank" class="project-cta">View Project <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
+        <!-- Orbit rings -->
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
 
-        <div class="project-card reveal">
-          <div class="project-badge">Live</div>
-          <div class="project-image">
-            <img src="images/time_bar_overflow.jpeg" alt="Gaming Rental Hub" class="project-screenshot" loading="lazy" />
-            <div class="project-overlay">
-              <a href="https://gamingrentalhub.com" target="_blank" class="project-link" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/VenkyCodeX" target="_blank" class="project-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
+        <!-- Orbiting project nodes -->
+        <a href="https://bikerentalhub.co.in" target="_blank" class="orbit-node" style="--angle:0deg; --orbit-r:180px; --duration:18s; --color:#00d4ff;" aria-label="Bike Rental Hub">
+          <div class="orbit-node-inner">
+            <img src="images/bikeRH.jpeg" alt="Bike Rental Hub" style="width:38px;height:38px;object-fit:contain;border-radius:50%;" />
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <h3>Gaming Rental Hub</h3>
-            <p>A gaming gear rental platform where users can browse, book, and rent consoles, controllers, and accessories online.</p>
-            <a href="https://gamingrentalhub.com" target="_blank" class="project-cta">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="orbit-node-tooltip">
+            <strong>Bike Rental Hub</strong>
+            <span>bikerentalhub.co.in</span>
           </div>
-        </div>
+        </a>
 
+        <a href="https://sriganeshbikerental.in" target="_blank" class="orbit-node" style="--angle:72deg; --orbit-r:180px; --duration:18s; --color:#7c3aed;" aria-label="Sri Ganesh Bike Rental">
+          <div class="orbit-node-inner">
+            <img src="images/sriganeshlogo.png" alt="Sri Ganesh Bike Rental" style="width:38px;height:38px;object-fit:contain;border-radius:50%;" />
+          </div>
+          <div class="orbit-node-tooltip">
+            <strong>Sri Ganesh Bike Rental</strong>
+            <span>sriganeshbikerental.in</span>
+          </div>
+        </a>
 
+        <a href="https://gamingrentalhub.com" target="_blank" class="orbit-node" style="--angle:144deg; --orbit-r:180px; --duration:18s; --color:#ff006e;" aria-label="Gaming Rental Hub">
+          <div class="orbit-node-inner">
+            <img src="images/gaminghub.jpeg" alt="Gaming Rental Hub" style="width:38px;height:38px;object-fit:contain;border-radius:50%;" />
+          </div>
+          <div class="orbit-node-tooltip">
+            <strong>Gaming Rental Hub</strong>
+            <span>gamingrentalhub.com</span>
+          </div>
+        </a>
 
+        <a href="https://github.com/VenkyCodeX" target="_blank" class="orbit-node" style="--angle:216deg; --orbit-r:180px; --duration:18s; --color:#10b981;" aria-label="SMIC Notes Portal">
+          <div class="orbit-node-inner orbit-node-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="orbit-node-tooltip">
+            <strong>SMIC Notes Portal</strong>
+            <span>github.com/VenkyCodeX</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/VenkyCodeX" target="_blank" class="orbit-node" style="--angle:288deg; --orbit-r:180px; --duration:18s; --color:#f59e0b;" aria-label="IdeoVest">
+          <div class="orbit-node-inner orbit-node-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <div class="orbit-node-tooltip">
+            <strong>IdeoVest</strong>
+            <span>github.com/VenkyCodeX</span>
+          </div>
+        </a>
       </div>
+
       <div class="projects-cta reveal">
         <a href="https://github.com/VenkyCodeX" target="_blank" class="btn-secondary">
           <i class="fa-brands fa-github"></i> View All on GitHub
@@ -904,7 +930,11 @@
           </a>
         </div>
         <div class="contact-form-wrap reveal-right">
-          <form id="contactForm" name="submit-to-google-sheet">
+          <form id="contactForm" action="https://formsubmit.co/vsmakkalvar@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from AlphaDevs Portfolio" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://alphadevs.in/#contact" />
             <div class="form-group">
               <input type="text" name="Name" placeholder="Your Name" required />
               <i class="fa-solid fa-user form-icon"></i>
@@ -918,7 +948,7 @@
               <i class="fa-solid fa-tag form-icon"></i>
             </div>
             <div class="form-group">
-              <textarea name="Message" rows="5" placeholder="Your Message..."></textarea>
+              <textarea name="Message" rows="5" placeholder="Your Message..." required></textarea>
               <i class="fa-solid fa-message form-icon textarea-icon"></i>
             </div>
             <button type="submit" class="btn-primary submit-btn">

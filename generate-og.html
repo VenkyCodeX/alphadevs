@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>OG Banner Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    body { background: #111; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 20px; font-family: Inter, sans-serif; }
+    canvas { border: 1px solid #333; border-radius: 8px; max-width: 100%; }
+    button {
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    p { color: #888; font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+  <canvas id="og" width="1200" height="630"></canvas>
+  <button onclick="download()">Download og-banner.jpg</button>
+  <p>Save this as <code>images/og-banner.jpg</code> in your portfolio folder.</p>
+
+  <script>
+    const canvas = document.getElementById('og');
+    const ctx = canvas.getContext('2d');
+    const W = 1200, H = 630;
+
+    // Background
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillRect(0, 0, W, H);
+
+    // Grid lines
+    ctx.strokeStyle = 'rgba(0,212,255,0.04)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < W; x += 40) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+    for (let y = 0; y < H; y += 40) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+
+    // Glow orbs
+    const addOrb = (x, y, r, color) => {
+      const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+      g.addColorStop(0, color);
+      g.addColorStop(1, 'transparent');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+    };
+    addOrb(200, 150, 300, 'rgba(0,212,255,0.12)');
+    addOrb(1000, 480, 280, 'rgba(124,58,237,0.14)');
+    addOrb(600, 600, 200, 'rgba(255,0,110,0.08)');
+
+    // Left accent bar
+    const bar = ctx.createLinearGradient(80, 180, 80, 450);
+    bar.addColorStop(0, '#00d4ff');
+    bar.addColorStop(1, '#7c3aed');
+    ctx.fillStyle = bar;
+    ctx.beginPath();
+    ctx.roundRect(80, 180, 5, 270, 3);
+    ctx.fill();
+
+    // Alpha symbol
+    ctx.font = '900 90px Inter, sans-serif';
+    const alphaGrad = ctx.createLinearGradient(120, 160, 280, 280);
+    alphaGrad.addColorStop(0, '#00d4ff');
+    alphaGrad.addColorStop(1, '#7c3aed');
+    ctx.fillStyle = alphaGrad;
+    ctx.fillText('α', 110, 280);
+
+    // AlphaDevs text
+    ctx.font = '800 72px Inter, sans-serif';
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText('Alpha', 200, 280);
+    const devGrad = ctx.createLinearGradient(430, 200, 620, 280);
+    devGrad.addColorStop(0, '#7c3aed');
+    devGrad.addColorStop(1, '#ff006e');
+    ctx.fillStyle = devGrad;
+    ctx.fillText('Devs', 430, 280);
+
+    // Tagline
+    ctx.font = '400 28px Inter, sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.55)';
+    ctx.fillText('Elite Development Agency', 110, 340);
+
+    // Divider
+    const div = ctx.createLinearGradient(110, 370, 700, 370);
+    div.addColorStop(0, 'rgba(0,212,255,0.6)');
+    div.addColorStop(1, 'transparent');
+    ctx.strokeStyle = div;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(110, 370);
+    ctx.lineTo(700, 370);
+    ctx.stroke();
+
+    // Services pills
+    const pills = ['Web Development', 'UI/UX Design', 'Full-Stack Apps', 'Startup MVPs'];
+    let px = 110;
+    pills.forEach(text => {
+      ctx.font = '600 18px Inter, sans-serif';
+      const tw = ctx.measureText(text).width;
+      const pw = tw + 28, ph = 36, py = 400;
+      ctx.strokeStyle = 'rgba(0,212,255,0.35)';
+      ctx.lineWidth = 1;
+      ctx.fillStyle = 'rgba(0,212,255,0.08)';
+      ctx.beginPath();
+      ctx.roundRect(px, py, pw, ph, 18);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#00d4ff';
+      ctx.fillText(text, px + 14, py + 24);
+      px += pw + 12;
+    });
+
+    // Contact line
+    ctx.font = '500 20px Inter, sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+    ctx.fillText('vsmakkalvar@gmail.com  ·  Hyderabad, India', 110, 490);
+
+    // Right side — decorative rings
+    const cx = 980, cy = 315, rings = [80, 130, 180, 230];
+    rings.forEach((r, i) => {
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(0,212,255,${0.18 - i * 0.03})`;
+      ctx.lineWidth = i % 2 === 0 ? 1.5 : 1;
+      ctx.setLineDash(i % 2 === 0 ? [] : [6, 6]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    });
+    // Center dot
+    const cg = ctx.createRadialGradient(cx, cy, 0, cx, cy, 40);
+    cg.addColorStop(0, 'rgba(0,212,255,0.3)');
+    cg.addColorStop(1, 'transparent');
+    ctx.fillStyle = cg;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 40, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.font = '900 36px Inter, sans-serif';
+    const cAlpha = ctx.createLinearGradient(cx-20, cy-20, cx+20, cy+20);
+    cAlpha.addColorStop(0, '#00d4ff');
+    cAlpha.addColorStop(1, '#7c3aed');
+    ctx.fillStyle = cAlpha;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('α', cx, cy);
+
+    // Border frame
+    ctx.strokeStyle = 'rgba(0,212,255,0.12)';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(1, 1, W - 2, H - 2);
+
+    function download() {
+      const link = document.createElement('a');
+      link.download = 'og-banner.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.92);
+      link.click();
+    }
+  </script>
+</body>
+</html>
