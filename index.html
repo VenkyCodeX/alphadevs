@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous"></script>
   <meta property="og:title" content="AlphaDevs | Elite Development Agency" />
   <meta property="og:description" content="Building next-generation digital products. Web, Mobile & AI solutions by Venkat Makkalwar." />
-  <meta property="og:image" content="images/og-banner.jpg" />
+  <meta property="og:image content=images/AlphaDev_logo.png />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
@@ -18,8 +18,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AlphaDevs | Elite Development Agency" />
   <meta name="twitter:description" content="Building next-generation digital products." />
-  <meta name="twitter:image" content="images/og-banner.jpg" />
-  <link rel="icon" type="image/png" href="images/VenkysLogo.png" />
+ <meta name=twitter:image content=images/AlphaDev_logo.png />
+ <link rel=icon type=image/png href=images/AlphaDev_logo.png />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -37,8 +37,7 @@
   <!-- LOADER -->
   <div id="loader">
     <div class="loader-content">
-      <div class="loader-logo">α</div>
-      <div class="loader-text">AlphaDevs</div>
+      <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="loader-logo-img" />
       <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
   </div>
@@ -53,7 +52,8 @@
   <nav id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-alpha">α</span><span class="logo-text">Alpha<span class="logo-accent">Devs</span></span>
+        <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="nav-logo-img" />
+        <span class="nav-logo-title">Alpha<span class="logo-accent">Devs</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="nav-link">Home</a></li>
@@ -64,9 +64,6 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon" id="themeIcon"></i>
-        </button>
         <a href="#contact" class="nav-cta">Get Started</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -152,7 +149,7 @@
       <div class="section-header reveal">
         <span class="section-tag">Technologies</span>
         <h2 class="section-title glitch" data-text="Tech Stack">Tech <span class="gradient-text">Stack</span></h2>
-        <p class="section-sub">The full stack I use to design, build, and ship products end-to-end</p>
+        <p class="section-sub">The full stack We use to design, build, and ship products end-to-end</p>
       </div>
 
       <div class="tech-stack-tabs reveal">
@@ -276,14 +273,14 @@
   <!-- ========== TEAM ========== -->
   <section id="team">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">The Person Behind It</span>
-        <h2 class="section-title glitch" data-text="Meet The Founder">Meet The <span class="gradient-text">Founder</span></h2>
-        <p class="section-sub">One developer. Full ownership. Zero middlemen.</p>
+ <div class=section-bg-wrap>
+ <div class=section-bg-text>founder</div>
+ </div>
+
       </div>
       <div class="solo-founder reveal">
         <div class="solo-avatar">
-          <img src="images/VenkysIMG.jpeg" alt="Venkat Makkalwar" />
+          <img src="images/VenkysIMG.png" alt="Venkat Makkalwar" />
         </div>
         <div class="solo-info">
           <h3>Venkat Makkalwar</h3>
@@ -416,10 +413,10 @@
   <!-- ========== SERVICES ========== -->
   <section id="services">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">What I Do</span>
-        <h2 class="section-title glitch" data-text="My Services">My <span class="gradient-text">Services</span></h2>
-        <p class="section-sub">End-to-end digital solutions for your business</p>
+      <div class="section-bg-wrap>
+ <div class=section-bg-text>services</div>
+ </div>
+
       </div>
       <div class="services-grid">
         <div class="service-card reveal-scale">
@@ -481,17 +478,14 @@
   <!-- ========== PROJECTS ========== -->
   <section id="projects">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">My Work</span>
-        <h2 class="section-title glitch" data-text="Featured Projects">Featured <span class="gradient-text">Projects</span></h2>
-        <p class="section-sub">Real projects built with passion and purpose</p>
+      <div class="projects-title-wrap">
+        <div class="projects-bg-text">projects</div>
       </div>
 
       <div class="orbital-wrap reveal">
         <!-- Center logo -->
         <div class="orbital-center">
-          <span class="logo-alpha">α</span>
-          <span class="orbital-center-label">AlphaDevs</span>
+          <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="orbital-logo-img" />
         </div>
 
         <!-- Orbit rings -->
@@ -551,11 +545,7 @@
         </a>
       </div>
 
-      <div class="projects-cta reveal">
-        <a href="https://github.com/VenkyCodeX" target="_blank" class="btn-secondary">
-          <i class="fa-brands fa-github"></i> View All on GitHub
-        </a>
-      </div>
+
     </div>
   </section>
 
@@ -594,10 +584,10 @@
   <!-- ========== TESTIMONIALS ========== -->
   <section id="testimonials">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Reviews</span>
-        <h2 class="section-title glitch" data-text="What Clients Say">What Clients <span class="gradient-text">Say</span></h2>
-        <p class="section-sub">Real feedback from people I've worked with</p>
+ <div class=section-bg-wrap>
+ <div class=section-bg-text>feedbacks</div>
+ </div>
+
       </div>
 
       <!-- Add Review Button -->
@@ -922,7 +912,8 @@
     <div class="footer-container">
       <div class="footer-top">
         <a href="#hero" class="footer-logo">
-          <span class="logo-alpha">α</span><span class="logo-text">Alpha<span class="logo-accent">Devs</span></span>
+          <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="footer-logo-img" />
+          <span class="footer-logo-title">Alpha<span class="logo-accent">Devs</span></span>
         </a>
         <p>Building next-generation digital products that drive business growth.</p>
         <div class="footer-socials">

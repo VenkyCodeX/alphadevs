@@ -153,34 +153,6 @@ if (typedTextElement) {
   setTimeout(() => { typeEffect(); }, 2600);
 }
 
-/* ========== THEME TOGGLE ========== */
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const htmlElement = document.documentElement;
-
-// Load theme from localStorage
-const savedTheme = localStorage.getItem('theme') || 'dark';
-htmlElement.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const currentTheme = htmlElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  htmlElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-  if (theme === 'dark') {
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-moon');
-  } else {
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-  }
-}
-
 /* ========== HAMBURGER MENU ========== */
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -545,7 +517,7 @@ const contactForm = document.getElementById('contactForm');
 // Change this to your deployed backend URL in production
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:5000'
-  : 'https://alphadevs.onrender.com';
+  : 'https://alphadevs.in';
 
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {

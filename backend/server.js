@@ -2,6 +2,7 @@ require('dotenv').config();
 const express  = require('express');
 const cors     = require('cors');
 const helmet   = require('helmet');
+const path     = require('path');
 const connectDB = require('./config/db');
 
 const contactRoute = require('./routes/contact');
@@ -14,7 +15,9 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // ========== MIDDLEWARE ==========
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false, // allow inline scripts/styles for portfolio
+}));
 
 app.use(cors({
   origin: [
@@ -26,6 +29,7 @@ app.use(cors({
     'http://localhost:3000',
     'https://venkycodex.github.io',
     'https://alphadevs.in',
+    'https://www.alphadevs.in',
   ].filter(Boolean),
   methods: ['GET', 'POST'],
   credentials: true,
@@ -34,7 +38,10 @@ app.use(cors({
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
-// ========== ROUTES ==========
+// ========== SERVE FRONTEND STATIC FILES ==========
+app.use(express.static(path.join(__dirname, '../')));
+
+// ========== API ROUTES ==========
 app.get('/api/health', (req, res) => {
   const mongoose = require('mongoose');
   res.json({
@@ -48,9 +55,9 @@ app.get('/api/health', (req, res) => {
 app.use('/api/contact', contactRoute);
 app.use('/api/reviews', reviewsRoute);
 
-// 404
-app.use((req, res) => {
-  res.status(404).json({ success: false, message: 'Route not found.' });
+// ========== SERVE INDEX.HTML FOR ALL NON-API ROUTES ==========
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 // Global error handler
@@ -61,8 +68,8 @@ app.use((err, req, res, next) => {
 
 // ========== START ==========
 app.listen(PORT, () => {
-  console.log(`\n🚀 AlphaDevs API  →  http://localhost:${PORT}`);
-  console.log(`   Health check   →  http://localhost:${PORT}/api/health`);
-  console.log(`   Contact API    →  POST http://localhost:${PORT}/api/contact`);
-  console.log(`   Reviews API    →  GET/POST http://localhost:${PORT}/api/reviews\n`);
+  console.log(`\n🚀 AlphaDevs  →  http://localhost:${PORT}`);
+  console.log(`   Health check →  http://localhost:${PORT}/api/health`);
+  console.log(`   Contact API  →  POST http://localhost:${PORT}/api/contact`);
+  console.log(`   Reviews API  →  GET/POST http://localhost:${PORT}/api/reviews\n`);
 });

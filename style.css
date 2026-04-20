@@ -5725,3 +5725,6 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ========== REMOVE SPLASH SCREEN ========== */
+#loader { display: none !important; }

@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: alphadevs-backend
+    name: alphadevs
     runtime: node
     rootDir: backend
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
