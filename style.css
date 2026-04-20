@@ -2871,7 +2871,7 @@ footer {
   .about-name { font-size: 26px; }
 
   /* Services */
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .service-card { padding: 28px; }
 
   /* Projects */
