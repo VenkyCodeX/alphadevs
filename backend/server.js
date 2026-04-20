@@ -7,6 +7,7 @@ const connectDB = require('./config/db');
 
 const contactRoute = require('./routes/contact');
 const reviewsRoute = require('./routes/reviews');
+const adminRoute   = require('./routes/admin');
 
 const app  = express();
 const PORT = process.env.PORT || 5000;
@@ -54,6 +55,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/contact', contactRoute);
 app.use('/api/reviews', reviewsRoute);
+app.use('/api/admin',   adminRoute);
 
 // ========== SERVE INDEX.HTML FOR ALL NON-API ROUTES ==========
 app.get('*', (req, res) => {

@@ -22,3 +22,5 @@ services:
         sync: false
       - key: FRONTEND_URL_PROD
         value: https://alphadevs.in
+      - key: ADMIN_SECRET
+        sync: false
