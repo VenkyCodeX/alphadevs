@@ -5121,7 +5121,7 @@ html[data-theme="light"] .tech-tab.active { color: #fff; }
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px; height: 100px;
+  width: 110px; height: 110px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0,212,255,0.12), rgba(124,58,237,0.08));
   border: 2px solid rgba(0,212,255,0.4);
@@ -5382,55 +5382,55 @@ html[data-theme="light"] .tech-tab.active { color: #fff; }
 }
 
 /* ========== FLOATING WHATSAPP — FIXED ========== */
-.float-wa {
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  z-index: 998;
-  display: inline-flex;
-  align-items: center;
-  width: 52px;
-  height: 52px;
-  background: #25d366;
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 13px;
-  box-shadow: 0 8px 30px rgba(37,211,102,0.45);
-  overflow: hidden;
-  white-space: nowrap;
-  transition: width 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-.float-wa i {
-  font-size: 26px;
-  min-width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.float-wa span {
-  max-width: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-}
-.float-wa:hover {
-  width: auto;
-  border-radius: 26px;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(37,211,102,0.6);
-}
-.float-wa:hover span { max-width: 140px; opacity: 1; padding-right: 16px; }
 
-@media (max-width: 768px) {
-  .float-wa { bottom: 80px; right: 12px; width: 46px; height: 46px; }
-  .float-wa i { min-width: 46px; height: 46px; font-size: 22px; }
-  .float-wa:hover { width: 46px; border-radius: 50%; }
-  .float-wa:hover span { max-width: 0; opacity: 0; padding-right: 0; }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========== MOBILE BOTTOM NAV — ALWAYS VISIBLE ========== */
 .mobile-bottom-nav {
@@ -5463,4 +5463,265 @@ body {
 }
 
 /* ========== HIDE REMOVED SECTIONS ========== */
-#tools, .float-wa, #pricing { display: none !important; }
+#tools, #pricing { display: none !important; }
+
+/* ========== ALPHADEVS LOGO IMAGE ========== */
+.nav-logo-img { height: 46px; width: 46px; object-fit: cover; border-radius: 50%; display: block; transition: var(--transition); filter: drop-shadow(0 0 8px rgba(0,212,255,0.3)); }
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: var(--transition);
+  filter: drop-shadow(0 0 8px rgba(0,212,255,0.3));
+}
+.nav-logo-img:hover { filter: drop-shadow(0 0 14px rgba(0,212,255,0.6)); transform: scale(1.05); }
+  filter: drop-shadow(0 0 14px rgba(0,212,255,0.6));
+  transform: scale(1.05);
+}
+
+.loader-logo-img { height: 100px; width: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; animation: pulse 1.5s ease-in-out infinite; filter: drop-shadow(0 0 20px rgba(0,212,255,0.4)); }
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(0,212,255,0.4));
+}
+
+.orbital-logo-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; filter: drop-shadow(0 0 10px rgba(0,212,255,0.4)); display: block; }
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px rgba(0,212,255,0.4));
+}
+
+.footer-logo-img { height: 50px; width: 50px; object-fit: cover; border-radius: 50%; display: block; transition: var(--transition); filter: drop-shadow(0 0 8px rgba(0,212,255,0.2)); }
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: var(--transition);
+  filter: drop-shadow(0 0 8px rgba(0,212,255,0.2));
+}
+.footer-logo:hover .footer-logo-img {
+  filter: drop-shadow(0 0 16px rgba(0,212,255,0.5));
+  transform: scale(1.05);
+}
+
+/* Adjust orbital center size for logo */
+.orbital-center { width: 110px; height: 110px; overflow: hidden; }
+  width: 90px;
+  height: 90px;
+}
+
+@media (max-width: 480px) {
+  .nav-logo-img { height: 38px; width: 38px; }
+  .orbital-logo-img { width: 64px; height: 64px; }
+  .orbital-logo-img { width: 100%; height: 100%; }
+  .orbital-center { width: 80px; height: 80px; }
+}
+
+/* ========== LOGO + TITLE ========== */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+  transition: var(--transition);
+}
+
+.nav-logo:hover .nav-logo-title { color: var(--color-primary); }
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer-logo-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 480px) {
+  .nav-logo-title { font-size: 18px; }
+  .footer-logo-title { font-size: 18px; }
+}
+
+/* ========== PROJECTS BG TEXT ========== */
+#projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(100px, 20vw, 220px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -4px;
+  line-height: 1;
+  z-index: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+#projects .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .projects-bg-text { font-size: clamp(70px, 22vw, 130px); }
+}
+
+/* ========== PROJECTS HEADER OVER BG TEXT ========== */
+.projects-header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 60px 0 20px;
+}
+
+.projects-header .section-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.projects-header .section-sub {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+/* Move bg text to top so it aligns behind the header */
+.projects-bg-text {
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .projects-header { padding: 40px 0 10px; }
+  .projects-header .section-sub { font-size: 15px; }
+}
+
+/* ========== PROJECTS TITLE WRAP ========== */
+.projects-title-wrap {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* bg text sits behind, fills the wrap */
+.projects-title-wrap .projects-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(100px, 20vw, 220px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -4px;
+  line-height: 1;
+  z-index: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* header text sits on top */
+.projects-title-wrap .projects-header {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+/* orbital comes after the wrap, not overlapping */
+.projects-title-wrap ~ .orbital-wrap {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .projects-title-wrap { min-height: 120px; margin-bottom: 40px; }
+}
+
+/* ========== ORBITAL CENTER LOGO FIX ========== */
+.orbital-center {
+  overflow: hidden;
+  padding: 0;
+}
+
+.orbital-logo-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  filter: drop-shadow(0 0 12px rgba(0,212,255,0.5));
+}
+
+/* ========== SECTION BG TEXT (services, founder, feedbacks) ========== */
+.section-bg-wrap {
+  position: relative;
+  text-align: center;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.section-bg-text {
+  font-size: clamp(80px, 18vw, 200px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -4px;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+}
+
+#services, #team, #testimonials {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-bg-wrap { min-height: 100px; margin-bottom: 30px; }
+  .section-bg-text { font-size: clamp(60px, 18vw, 120px); }
+}
+
+/* ========== SERVICES GRID — 2 COLUMN LAYOUT ========== */
+.services-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 24px !important;
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
