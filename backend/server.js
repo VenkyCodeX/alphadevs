@@ -39,6 +39,14 @@ app.use(cors({
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
+// ========== FORCE HTTPS ==========
+app.use((req, res, next) => {
+  if (req.headers['x-forwarded-proto'] !== 'https' && process.env.NODE_ENV === 'production') {
+    return res.redirect(301, 'https://' + req.headers.host + req.url);
+  }
+  next();
+});
+
 // ========== SERVE FRONTEND STATIC FILES ==========
 app.use(express.static(path.join(__dirname, '../')));
 
