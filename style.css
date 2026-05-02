@@ -3223,7 +3223,6 @@ html, body {
   margin: 0 auto;
 }
 
-.process-timeline::before {
   content: '';
   position: absolute;
   left: 50%;
@@ -3233,6 +3232,7 @@ html, body {
   background: var(--gradient-primary);
   transform: translateX(-50%);
   opacity: 0.3;
+}
 }
 
 .process-step {
