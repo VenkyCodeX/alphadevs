@@ -32,7 +32,8 @@ app.use(cors({
     'https://alphadevs.in',
     'https://www.alphadevs.in',
   ].filter(Boolean),
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'x-admin-token'],
   credentials: true,
 }));
 

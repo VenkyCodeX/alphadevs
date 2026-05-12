@@ -690,16 +690,6 @@ document.querySelectorAll('.process-step').forEach((step, i) => {
   step.style.transitionDelay = `${i * 0.15}s`;
 });
 
-/* ========== PRICING CARD HOVER GLOW ========== */
-document.querySelectorAll('.pricing-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    card.style.boxShadow = '0 20px 50px rgba(0,212,255,0.15)';
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.boxShadow = '';
-  });
-});
-
 console.log('🚀 AlphaDevs — Building next-gen digital products.');
 
 /* ========== AVAILABILITY BANNER CLOSE ========== */
@@ -723,52 +713,6 @@ console.log('🚀 AlphaDevs — Building next-gen digital products.');
       if (!isOpen) item.classList.add('open');
     });
   });
-})();
-
-/* ========== PRICING TOGGLE ========== */
-(function() {
-  const toggle = document.getElementById('pricingToggle');
-  const labelOne = document.getElementById('toggleLabelOne');
-  const labelMonthly = document.getElementById('toggleLabelMonthly');
-  const usdBtn = document.getElementById('currencyUSD');
-  const inrBtn = document.getElementById('currencyINR');
-  if (!toggle) return;
-  let isMonthly = false;
-  let isINR = false;
-
-  function updatePrices() {
-    const period = isMonthly ? 'monthly' : 'onetime';
-    const currency = isINR ? 'Inr' : 'Usd';
-    document.querySelectorAll('.price-val').forEach(el => {
-      el.textContent = el.dataset[period + currency];
-    });
-    document.querySelectorAll('.price-symbol').forEach(el => {
-      el.textContent = isINR ? '\u20b9' : '$';
-    });
-  }
-
-  toggle.addEventListener('click', () => {
-    isMonthly = !isMonthly;
-    toggle.classList.toggle('monthly', isMonthly);
-    labelOne.classList.toggle('active-label', !isMonthly);
-    labelMonthly.classList.toggle('active-label', isMonthly);
-    updatePrices();
-  });
-
-  if (usdBtn && inrBtn) {
-    usdBtn.addEventListener('click', () => {
-      isINR = false;
-      usdBtn.classList.add('active');
-      inrBtn.classList.remove('active');
-      updatePrices();
-    });
-    inrBtn.addEventListener('click', () => {
-      isINR = true;
-      inrBtn.classList.add('active');
-      usdBtn.classList.remove('active');
-      updatePrices();
-    });
-  }
 })();
 
 /* ========== CAROUSEL CONTROLS ========== */

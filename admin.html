@@ -235,24 +235,35 @@
 
     async function deleteReview(id) {
       if (!confirm('Delete this review permanently?')) return;
-      const res  = await fetch(`${API}/reviews/${id}`, {
-        method: 'DELETE',
-        headers: { 'x-admin-token': adminToken }
-      });
-      const data = await res.json();
-      if (data.success) {
-        document.getElementById(`card-${id}`).remove();
-        showPanel();
+      try {
+        const res  = await fetch(`${API}/reviews/${id}`, {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken }
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById(`card-${id}`).remove();
+          showPanel();
+        } else {
+          alert('Delete failed: ' + (data.message || 'Unknown error'));
+        }
+      } catch (err) {
+        alert('Delete failed: ' + err.message);
       }
     }
 
     async function toggleReview(id, btn) {
-      const res  = await fetch(`${API}/reviews/${id}/toggle`, {
-        method: 'PATCH',
-        headers: { 'x-admin-token': adminToken }
-      });
-      const data = await res.json();
-      if (data.success) showPanel();
+      try {
+        const res  = await fetch(`${API}/reviews/${id}/toggle`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken }
+        });
+        const data = await res.json();
+        if (data.success) showPanel();
+        else alert('Toggle failed: ' + (data.message || 'Unknown error'));
+      } catch (err) {
+        alert('Toggle failed: ' + err.message);
+      }
     }
   </script>
 </body>
