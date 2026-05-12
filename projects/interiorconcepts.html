@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Concepts — Case Study | AlphaDevs</title>
+  <meta name="description" content="How AlphaDevs built Interior Concepts — a modern interior design showcase website for Gauri Interiors." />
+  <link rel="icon" type="image/png" href="../images/AlphaDev_logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="project.css" />
+  <style>
+    /* ========== UNDER DEVELOPMENT POPUP ========== */
+    .dev-popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .dev-popup {
+      background: #111;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 20px;
+      padding: 40px 36px;
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 60px rgba(245, 158, 11, 0.15), 0 30px 80px rgba(0,0,0,0.6);
+      animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.85) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .dev-popup-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 2px solid rgba(245, 158, 11, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+      color: #f59e0b;
+      animation: spin-slow 6s linear infinite;
+    }
+
+    @keyframes spin-slow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.4); }
+      50%       { box-shadow: 0 0 0 10px rgba(245,158,11,0); }
+    }
+
+    .dev-popup-tag {
+      display: inline-block;
+      padding: 5px 14px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #f59e0b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .dev-popup h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .dev-popup p {
+      font-size: 14px;
+      color: #a0a0a0;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .dev-popup-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .dev-popup-close {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+      color: #0a0a0a;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+    .dev-popup-close:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,255,0.3); }
+
+    .dev-popup-visit {
+      padding: 12px 24px;
+      background: transparent;
+      color: #f59e0b;
+      border: 2px solid rgba(245,158,11,0.4);
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+    .dev-popup-visit:hover { background: rgba(245,158,11,0.1); border-color: #f59e0b; transform: translateY(-2px); }
+
+    /* Interior accent color overrides */
+    .interior-accent { color: #f59e0b; }
+    .cs-hero-bg {
+      background: radial-gradient(ellipse at 30% 50%, rgba(245,158,11,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(124,58,237,0.08) 0%, transparent 60%) !important;
+    }
+    .cs-logo-wrap {
+      background: rgba(245,158,11,0.1);
+      border-color: rgba(245,158,11,0.4) !important;
+      box-shadow: 0 0 40px rgba(245,158,11,0.2) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: #f59e0b;
+    }
+    .cs-tag {
+      background: rgba(245,158,11,0.1) !important;
+      border-color: rgba(245,158,11,0.3) !important;
+      color: #f59e0b !important;
+    }
+    .cs-hero h1 {
+      background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .cs-btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+    }
+    .cs-btn-primary:hover { box-shadow: 0 10px 30px rgba(245,158,11,0.3) !important; }
+    .cs-btn-secondary { border-color: #f59e0b !important; }
+    .cs-btn-secondary:hover { background: #f59e0b !important; }
+    .cs-text h2 {
+      background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .cs-info-card > i { color: #f59e0b !important; }
+    .cs-impact-card > i { color: #f59e0b !important; }
+    .cs-impact-card:hover { border-color: #f59e0b !important; background: rgba(245,158,11,0.04) !important; }
+    .cs-stat-num {
+      background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .cs-cta {
+      background: radial-gradient(ellipse at center, rgba(245,158,11,0.08) 0%, transparent 70%) !important;
+    }
+    .cs-section h2 {
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .wip-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.35);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #f59e0b;
+      margin-bottom: 20px;
+    }
+    .wip-dot {
+      width: 7px; height: 7px;
+      background: #f59e0b;
+      border-radius: 50%;
+      animation: wip-ping 1.5s ease-in-out infinite;
+    }
+    @keyframes wip-ping {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.5); }
+      50%       { box-shadow: 0 0 0 6px rgba(245,158,11,0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UNDER DEVELOPMENT POPUP -->
+  <div class="dev-popup-overlay" id="devPopup">
+    <div class="dev-popup">
+      <div class="dev-popup-icon">
+        <i class="fa-solid fa-hammer"></i>
+      </div>
+      <span class="dev-popup-tag">🚧 Work in Progress</span>
+      <h2>Website Under Development</h2>
+      <p>The live Interior Concepts website is currently being built. The case study below showcases the project scope, design decisions, and planned features.</p>
+      <div class="dev-popup-actions">
+        <button class="dev-popup-close" onclick="document.getElementById('devPopup').style.display='none'">
+          View Case Study
+        </button>
+        <a href="https://gauri-interior.vercel.app/" target="_blank" class="dev-popup-visit">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Site
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK BUTTON -->
+  <a href="../index.html" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+  </a>
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="cs-hero-bg"></div>
+    <div class="cs-hero-content">
+      <div class="cs-logo-wrap">
+        <i class="fa-solid fa-couch"></i>
+      </div>
+      <div class="wip-badge"><span class="wip-dot"></span> Under Development</div>
+      <span class="cs-tag">Case Study</span>
+      <h1>Interior Concepts</h1>
+      <p>A premium interior design showcase website for Gauri Interiors — featuring project galleries, service listings, and a client inquiry system.</p>
+      <div class="cs-links">
+        <a href="https://gauri-interior.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn-primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Live Site
+        </a>
+        <a href="../index.html#contact" class="cs-btn-secondary">
+          <i class="fa-solid fa-paper-plane"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="cs-stats">
+    <div class="cs-container">
+      <div class="cs-stat-grid">
+        <div class="cs-stat">
+          <span class="cs-stat-num">15+</span>
+          <span class="cs-stat-label">Design Projects</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-num">3 Weeks</span>
+          <span class="cs-stat-label">Delivery Timeline</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-num">100%</span>
+          <span class="cs-stat-label">Mobile Responsive</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-num">Vercel</span>
+          <span class="cs-stat-label">Hosted On</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROWSER PREVIEW -->
+  <section class="cs-screenshot">
+    <div class="cs-container">
+      <div class="cs-browser">
+        <div class="cs-browser-bar">
+          <span class="cs-dot red"></span>
+          <span class="cs-dot yellow"></span>
+          <span class="cs-dot green"></span>
+          <span class="cs-browser-url">gauri-interior.vercel.app</span>
+        </div>
+        <div class="cs-browser-screen" style="background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(124,58,237,0.08)); min-height: 300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:16px; padding:60px 20px;">
+          <i class="fa-solid fa-hammer" style="font-size:56px; color:rgba(245,158,11,0.4);"></i>
+          <p style="color:#a0a0a0; font-size:15px; font-weight:600;">Site preview coming soon</p>
+          <a href="https://gauri-interior.vercel.app/" target="_blank" style="color:#f59e0b; font-size:13px; font-weight:700; text-decoration:none; display:flex; align-items:center; gap:6px;">
+            Visit gauri-interior.vercel.app <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="cs-container cs-two-col">
+      <div class="cs-text">
+        <h2>Project Overview</h2>
+        <p>Gauri Interiors is a professional interior design firm that needed a modern, visually rich website to showcase their portfolio of residential and commercial projects. The goal was to create a premium digital presence that reflects the quality and elegance of their work.</p>
+        <p>The website features a curated project gallery, detailed service pages, a client testimonials section, and a contact/inquiry form — all designed to convert visitors into leads.</p>
+        <p>The site is currently in active development with the final design and content being finalized with the client.</p>
+      </div>
+      <div class="cs-info-cards">
+        <div class="cs-info-card">
+          <i class="fa-solid fa-calendar"></i>
+          <div>
+            <span>Timeline</span>
+            <strong>3 Weeks</strong>
+          </div>
+        </div>
+        <div class="cs-info-card">
+          <i class="fa-solid fa-code"></i>
+          <div>
+            <span>Tech Stack</span>
+            <strong>HTML, CSS, JavaScript, Vercel</strong>
+          </div>
+        </div>
+        <div class="cs-info-card">
+          <i class="fa-solid fa-user"></i>
+          <div>
+            <span>Client</span>
+            <strong>Gauri Interiors</strong>
+          </div>
+        </div>
+        <div class="cs-info-card">
+          <i class="fa-solid fa-globe"></i>
+          <div>
+            <span>Type</span>
+            <strong>Interior Design Portfolio</strong>
+          </div>
+        </div>
+        <div class="cs-info-card">
+          <i class="fa-solid fa-hammer" style="color:#f59e0b;"></i>
+          <div>
+            <span>Status</span>
+            <strong style="color:#f59e0b;">Under Development</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="cs-section cs-dark">
+    <div class="cs-container">
+      <h2 class="cs-center">Key Features</h2>
+      <div class="cs-impact-grid">
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-images"></i>
+          <h3>Project Gallery</h3>
+          <p>A visually rich gallery showcasing residential and commercial interior design projects with high-quality photography.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-pen-ruler"></i>
+          <h3>Services Showcase</h3>
+          <p>Detailed service pages covering living room design, bedroom interiors, kitchen remodels, and commercial spaces.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h3>Fully Responsive</h3>
+          <p>Pixel-perfect design across all devices — desktop, tablet, and mobile — ensuring a seamless browsing experience.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>Inquiry Form</h3>
+          <p>A clean contact and project inquiry form that lets potential clients describe their requirements and get a callback.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-star"></i>
+          <h3>Client Testimonials</h3>
+          <p>A testimonials section featuring real client reviews to build trust and credibility with new visitors.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>SEO Optimized</h3>
+          <p>Built with SEO best practices — meta tags, semantic HTML, fast load times, and proper heading structure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="cs-container">
+      <h2 class="cs-center">Development Process</h2>
+      <div class="cs-impact-grid" style="margin-top:40px;">
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>01 — Discovery</h3>
+          <p>Understood the client's brand identity, target audience, and the types of interior projects they specialize in.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-brands fa-figma"></i>
+          <h3>02 — Design</h3>
+          <p>Created wireframes and high-fidelity mockups in Figma, focusing on a warm, premium aesthetic that matches interior design sensibilities.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>03 — Development</h3>
+          <p>Built the site with clean HTML, CSS, and JavaScript — no heavy frameworks, ensuring fast load times and easy maintenance.</p>
+        </div>
+        <div class="cs-impact-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>04 — Deployment</h3>
+          <p>Deployed on Vercel for instant global CDN delivery, automatic HTTPS, and zero-downtime updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cs-cta">
+    <div class="cs-container cs-center">
+      <h2>Need a portfolio website?</h2>
+      <p>Let's build a stunning showcase for your business — design, development, and deployment included.</p>
+      <a href="../index.html#contact" class="cs-btn-primary">
+        <i class="fa-solid fa-paper-plane"></i> Start Your Project
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="cs-footer">
+    <div class="cs-container cs-center">
+      <a href="../index.html" class="cs-footer-logo">
+        <img src="../images/AlphaDev_logo.png" alt="AlphaDevs" />
+        <span>Alpha<strong>Devs</strong></span>
+      </a>
+      <p>© 2025 AlphaDevs. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
