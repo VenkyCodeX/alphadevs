@@ -234,6 +234,7 @@ Visit `/admin.html` to manage reviews. You'll be prompted for the `ADMIN_SECRET`
 | Bike Rental Hub | [bikerentalhub.co.in](https://bikerentalhub.co.in) |
 | Sri Ganesh Bike Rental | [sriganeshbikerental.in](https://sriganeshbikerental.in) |
 | Gaming Rental Hub | [gamingrentalhub.com](https://gamingrentalhub.com) |
+| Interior Concepts | [gauri-interior.vercel.app](https://gauri-interior.vercel.app/) |
 
 ---
 
