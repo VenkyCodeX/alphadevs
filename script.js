@@ -452,22 +452,23 @@ if (aboutSection) skillObserver.observe(aboutSection);
 
 /* ========== COUNTER ANIMATION ========== */
 const counters = document.querySelectorAll('.stat-number');
-const speed = 200;
 
 const runCounter = () => {
   counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = target / speed;
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 10);
-      } else {
-        counter.innerText = target;
-      }
+    const target = +counter.getAttribute('data-target');
+    counter.innerText = '0';
+    const duration = 1800;
+    const start = performance.now();
+    const update = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      counter.innerText = Math.floor(ease * target);
+      if (progress < 1) requestAnimationFrame(update);
+      else counter.innerText = target;
     };
-    updateCount();
+    requestAnimationFrame(update);
   });
 };
 
