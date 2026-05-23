@@ -50,12 +50,9 @@ app.use((req, res, next) => {
 
 // ========== SERVE FRONTEND STATIC FILES ==========
 const fs = require('fs');
-const frontendPath = fs.existsSync(path.join(__dirname, '../index.html'))
-  ? path.join(__dirname, '../')
-  : path.join(process.cwd(), '../');
-if (fs.existsSync(path.join(frontendPath, 'index.html'))) {
-  app.use(express.static(frontendPath));
-}
+const frontendPath = path.join(__dirname, '..');
+console.log('Frontend path:', frontendPath, '| index exists:', fs.existsSync(path.join(frontendPath, 'index.html')));
+app.use(express.static(frontendPath));
 
 // ========== API ROUTES ==========
 app.get('/api/health', (req, res) => {
@@ -74,12 +71,10 @@ app.use('/api/admin',   adminRoute);
 
 // ========== SERVE INDEX.HTML FOR ALL NON-API ROUTES ==========
 app.get('*', (req, res) => {
-  const indexPath = path.join(frontendPath, 'index.html');
-  if (fs.existsSync(indexPath)) {
-    res.sendFile(indexPath);
-  } else {
-    res.status(404).json({ message: 'Frontend not found', cwd: process.cwd(), dir: __dirname });
-  }
+  const indexPath = path.join(__dirname, '..', 'index.html');
+  res.sendFile(indexPath, err => {
+    if (err) res.status(404).json({ message: 'Frontend not found', indexPath, cwd: process.cwd(), dir: __dirname });
+  });
 });
 
 // Global error handler
