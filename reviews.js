@@ -1,7 +1,7 @@
 // ========== API URL ==========
 const REVIEWS_API = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:5000/api/reviews'
-  : 'https://alphadevs.onrender.com/api/reviews';
+  : 'https://alphadevs-production.up.railway.app/api/reviews';
 
 // ========== STAR RATING ==========
 let selectedRating = 5;
