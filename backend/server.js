@@ -49,7 +49,11 @@ app.use((req, res, next) => {
 });
 
 // ========== SERVE FRONTEND STATIC FILES ==========
-app.use(express.static(path.join(__dirname, '../')));
+const frontendPath = path.join(__dirname, '../');
+const fs = require('fs');
+if (fs.existsSync(path.join(frontendPath, 'index.html'))) {
+  app.use(express.static(frontendPath));
+}
 
 // ========== API ROUTES ==========
 app.get('/api/health', (req, res) => {
@@ -68,7 +72,12 @@ app.use('/api/admin',   adminRoute);
 
 // ========== SERVE INDEX.HTML FOR ALL NON-API ROUTES ==========
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  const indexPath = path.join(__dirname, '../index.html');
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).json({ message: 'Frontend not found' });
+  }
 });
 
 // Global error handler
