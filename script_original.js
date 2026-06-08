@@ -502,13 +502,23 @@ tabButtons.forEach(button => {
   });
 });
 
+/* ========== EMAILJS INIT ========== */
+// Replace these with your actual EmailJS credentials from https://emailjs.com
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz456'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'abcDEFghiJKL'
+
+if (typeof emailjs !== 'undefined') {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
 /* ========== CONTACT FORM HANDLING ========== */
 const contactForm = document.getElementById('contactForm');
 
 // Change this to your deployed backend URL in production
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:5000'
-  : 'https://alphadevs.onrender.com';
+  : 'https://alphadevs.up.railway.app';
 
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
@@ -682,102 +692,6 @@ document.querySelectorAll('.process-step').forEach((step, i) => {
 });
 
 console.log('🚀 AlphaDevs — Building next-gen digital products.');
-
-/* ========== SERVICES CAROUSEL ========== */
-(function() {
-  const track  = document.getElementById('servicesTrack');
-  const prev   = document.getElementById('servicesPrev');
-  const next   = document.getElementById('servicesNext');
-  const dotsEl = document.getElementById('servicesDots');
-  if (!track || !prev || !next) return;
-
-  let current = 0;
-  let autoTimer = null;
-
-  function getCards() { return [...track.querySelectorAll('.service-card')]; }
-
-  function visibleCount() {
-    const c = getCards()[0];
-    if (!c) return 1;
-    const cardW = c.offsetWidth + 24; // width + gap
-    return Math.max(1, Math.round(track.offsetWidth / cardW));
-  }
-
-  function maxIndex() {
-    return Math.max(0, getCards().length - visibleCount());
-  }
-
-  function buildDots() {
-    if (!dotsEl) return;
-    dotsEl.innerHTML = '';
-    const total = maxIndex() + 1;
-    for (let i = 0; i < total; i++) {
-      const d = document.createElement('button');
-      d.className = 'services-dot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', () => goTo(i));
-      dotsEl.appendChild(d);
-    }
-  }
-
-  function updateUI() {
-    if (dotsEl) {
-      dotsEl.querySelectorAll('.services-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-    }
-    prev.disabled = current === 0;
-    next.disabled = current >= maxIndex();
-  }
-
-  function goTo(idx) {
-    const cards = getCards();
-    current = Math.min(Math.max(idx, 0), maxIndex());
-    const card = cards[current];
-    if (card) {
-      track.scrollTo({ left: card.offsetLeft, behavior: 'smooth' });
-    }
-    updateUI();
-  }
-
-  prev.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
-  next.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
-
-  // Sync current index when user manually swipes
-  track.addEventListener('scroll', () => {
-    const cards = getCards();
-    const scrollLeft = track.scrollLeft;
-    let closest = 0;
-    let minDiff = Infinity;
-    cards.forEach((c, i) => {
-      const diff = Math.abs(c.offsetLeft - scrollLeft);
-      if (diff < minDiff) { minDiff = diff; closest = i; }
-    });
-    current = Math.min(closest, maxIndex());
-    updateUI();
-  }, { passive: true });
-
-  function startAuto() {
-    stopAuto();
-    autoTimer = setInterval(() => {
-      const next = current >= maxIndex() ? 0 : current + 1;
-      goTo(next);
-    }, 3000);
-  }
-
-  function stopAuto() {
-    clearInterval(autoTimer);
-  }
-
-  // Pause auto-scroll on hover/touch
-  track.addEventListener('mouseenter', stopAuto);
-  track.addEventListener('mouseleave', startAuto);
-  track.addEventListener('touchstart', stopAuto, { passive: true });
-  track.addEventListener('touchend', () => setTimeout(startAuto, 3000), { passive: true });
-
-  buildDots();
-  updateUI();
-  startAuto();
-
-  window.addEventListener('resize', () => { buildDots(); updateUI(); });
-})();
 
 /* ========== AVAILABILITY BANNER CLOSE ========== */
 (function() {

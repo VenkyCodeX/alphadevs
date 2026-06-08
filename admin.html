@@ -203,34 +203,67 @@
         return;
       }
 
-      document.getElementById('reviewsList').innerHTML = reviews.map(r => {
+      const list = document.getElementById('reviewsList');
+      list.innerHTML = '';
+      reviews.forEach(r => {
         const initials = r.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0,2);
         const stars    = Array.from({length:5},(_,i) => `<i class="fa-${i < r.rating ? 'solid' : 'regular'} fa-star"></i>`).join('');
         const date     = new Date(r.createdAt).toLocaleDateString('en-IN', {day:'numeric',month:'short',year:'numeric'});
-        return `
-          <div class="review-card ${r.approved ? '' : 'unapproved'}" id="card-${r._id}">
-            <div class="review-top">
-              <div class="review-author">
-                <div class="avatar">${initials}</div>
-                <div>
-                  <div class="review-name">${r.name} <span class="badge ${r.approved ? 'approved' : 'pending'}">${r.approved ? 'Visible' : 'Hidden'}</span></div>
-                  <div class="review-role">${r.role}</div>
-                </div>
-              </div>
-              <div class="review-actions">
-                <button class="btn btn-toggle ${r.approved ? '' : 'unapproved'}" onclick="toggleReview('${r._id}', this)">
-                  <i class="fa-solid fa-eye${r.approved ? '-slash' : ''}"></i> ${r.approved ? 'Hide' : 'Show'}
-                </button>
-                <button class="btn btn-danger" onclick="deleteReview('${r._id}')">
-                  <i class="fa-solid fa-trash"></i> Delete
-                </button>
-              </div>
+
+        const card = document.createElement('div');
+        card.className = `review-card ${r.approved ? '' : 'unapproved'}`;
+        card.id = `card-${r._id}`;
+
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = `btn btn-toggle ${r.approved ? '' : 'unapproved'}`;
+        toggleBtn.innerHTML = `<i class="fa-solid fa-eye${r.approved ? '-slash' : ''}"></i>`;
+        toggleBtn.appendChild(document.createTextNode(r.approved ? ' Hide' : ' Show'));
+        toggleBtn.addEventListener('click', () => toggleReview(r._id));
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'btn btn-danger';
+        deleteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+        deleteBtn.appendChild(document.createTextNode(' Delete'));
+        deleteBtn.addEventListener('click', () => deleteReview(r._id));
+
+        const nameEl = document.createElement('div');
+        nameEl.className = 'review-name';
+        nameEl.textContent = r.name;
+        const badge = document.createElement('span');
+        badge.className = `badge ${r.approved ? 'approved' : 'pending'}`;
+        badge.textContent = r.approved ? 'Visible' : 'Hidden';
+        nameEl.appendChild(badge);
+
+        const roleEl = document.createElement('div');
+        roleEl.className = 'review-role';
+        roleEl.textContent = r.role;
+
+        const msgEl = document.createElement('div');
+        msgEl.className = 'review-msg';
+        msgEl.textContent = `"${r.message}"`;
+
+        const dateEl = document.createElement('div');
+        dateEl.className = 'review-date';
+        dateEl.textContent = date;
+
+        card.innerHTML = `
+          <div class="review-top">
+            <div class="review-author">
+              <div class="avatar">${initials}</div>
+              <div></div>
             </div>
-            <div class="stars">${stars}</div>
-            <div class="review-msg">"${r.message}"</div>
-            <div class="review-date">${date}</div>
-          </div>`;
-      }).join('');
+            <div class="review-actions"></div>
+          </div>
+          <div class="stars">${stars}</div>`;
+
+        card.querySelector('.review-author > div:last-child').appendChild(nameEl);
+        card.querySelector('.review-author > div:last-child').appendChild(roleEl);
+        card.querySelector('.review-actions').appendChild(toggleBtn);
+        card.querySelector('.review-actions').appendChild(deleteBtn);
+        card.appendChild(msgEl);
+        card.appendChild(dateEl);
+        list.appendChild(card);
+      });
     }
 
     async function deleteReview(id) {

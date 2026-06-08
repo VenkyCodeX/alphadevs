@@ -35,6 +35,7 @@ router.delete('/reviews/:id', adminAuth, async (req, res) => {
 router.patch('/reviews/:id/toggle', adminAuth, async (req, res) => {
   try {
     const review = await Review.findById(req.params.id);
+    if (!review) return res.status(404).json({ success: false, message: 'Review not found.' });
     review.approved = !review.approved;
     await review.save();
     res.json({ success: true, approved: review.approved });

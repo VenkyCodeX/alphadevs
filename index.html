@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous"></script>
   <meta property="og:title" content="AlphaDevs | Elite Development Agency" />
   <meta property="og:description" content="Building next-generation digital products. Web, Mobile & AI solutions by Venkat Makkalwar." />
-  <meta property="og:image content=images/AlphaDev_logo.png />
+  <meta property="og:image" content="https://alphadevs.in/images/AlphaDev_logo.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AlphaDevs | Elite Development Agency" />
   <meta name="twitter:description" content="Building next-generation digital products." />
- <meta name=twitter:image content=images/AlphaDev_logo.png />
+  <meta name="twitter:image" content="https://alphadevs.in/images/AlphaDev_logo.png" />
   <link rel="canonical" href="https://alphadevs.in/" />
   <link rel="icon" type="image/png" href="images/AlphaDev_logo.png" />
   <link rel="shortcut icon" type="image/png" href="images/AlphaDev_logo.png" />
@@ -29,14 +29,10 @@
 </head>
 <body>
 
-  <!-- SCROLL PROGRESS -->
   <div id="scroll-progress"></div>
-
-  <!-- CUSTOM CURSOR -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- LOADER -->
   <div id="loader">
     <div class="loader-content">
       <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="loader-logo-img" />
@@ -44,13 +40,10 @@
     </div>
   </div>
 
-  <!-- FLOATING CTA -->
   <a href="#contact" class="float-cta" aria-label="Start a project">
-    <i class="fa-solid fa-rocket"></i>
-    <span>Start Project</span>
+    <i class="fa-solid fa-rocket"></i><span>Start Project</span>
   </a>
 
-  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
@@ -60,7 +53,8 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="nav-link">Home</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#projects" class="nav-link">Partners</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -73,164 +67,42 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-bg">
       <div class="hero-aurora">
-        <div class="aurora-1"></div>
-        <div class="aurora-2"></div>
-        <div class="aurora-3"></div>
+        <div class="aurora-1"></div><div class="aurora-2"></div><div class="aurora-3"></div>
       </div>
       <canvas id="particles-canvas"></canvas>
       <div class="hero-grid"></div>
     </div>
-
     <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        <span>Available for New Projects</span>
-      </div>
-
+      <div class="hero-badge reveal"><span class="badge-dot"></span><span>Available for New Projects</span></div>
       <h1 class="hero-title reveal">
         <span class="title-line">We Build</span>
         <span class="title-line gradient-text">Next-Gen Products</span>
       </h1>
-
       <div class="hero-typing reveal">
         <span class="typing-label"> specialize in:</span>
         <span class="typing-text" id="typed-text"></span><span class="cursor">|</span>
       </div>
-
-      <p class="hero-desc reveal">
-        Transform your vision into reality with cutting-edge technology.
-        We craft scalable web apps, mobile solutions, and AI-powered platforms
-        that drive measurable business growth.
-      </p>
-
+      <p class="hero-desc reveal">Transform your vision into reality with cutting-edge technology. We craft scalable web apps, mobile solutions, and AI-powered platforms that drive measurable business growth.</p>
       <div class="hero-buttons reveal">
-        <a href="#contact" class="btn-primary btn-lg">
-          <span>Start Your Project</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <a href="#projects" class="btn-secondary btn-lg">
-          <span>View Our Work</span>
-          <i class="fa-solid fa-briefcase"></i>
-        </a>
+        <a href="#contact" class="btn-primary btn-lg"><span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#projects" class="btn-secondary btn-lg"><span>View Our Work</span><i class="fa-solid fa-briefcase"></i></a>
       </div>
-
       <div class="hero-stats reveal">
-        <div class="stat-item">
-          <span class="stat-value">10+</span>
-          <span class="stat-label">Projects Delivered</span>
-        </div>
+        <div class="stat-item"><span class="stat-value">10+</span><span class="stat-label">Projects Delivered</span></div>
         <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-value">8+</span>
-          <span class="stat-label">Happy Clients</span>
-        </div>
+        <div class="stat-item"><span class="stat-value">8+</span><span class="stat-label">Happy Clients</span></div>
         <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-value">2+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
+        <div class="stat-item"><span class="stat-value">2+</span><span class="stat-label">Years Experience</span></div>
       </div>
     </div>
-
-    <div class="hero-scroll">
-      <div class="scroll-content">
-        <span>Scroll to explore</span>
-        <div class="scroll-animation"><div></div></div>
-      </div>
-    </div>
+    <div class="hero-scroll"><div class="scroll-content"><span>Scroll to explore</span><div class="scroll-animation"><div></div></div></div></div>
   </section>
 
-  <!-- ========== TOOLS I USE ========== -->
-  <section id="tech">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Technologies</span>
-        <h2 class="section-title glitch" data-text="Tech Stack">Tech <span class="gradient-text">Stack</span></h2>
-        <p class="section-sub">The full stack We use to design, build, and ship products end-to-end</p>
-      </div>
-
-      <div class="tech-stack-tabs reveal">
-        <button class="tech-tab active" data-tab="frontend">Frontend</button>
-        <button class="tech-tab" data-tab="backend">Backend</button>
-        <button class="tech-tab" data-tab="database">Database</button>
-        <button class="tech-tab" data-tab="devops">DevOps &amp; Tools</button>
-        <button class="tech-tab" data-tab="design">Design</button>
-      </div>
-
-      <div class="tech-panel active" id="tech-frontend">
-        <div class="tech-grid">
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-html5" style="color:#E34F26"></i><h4>HTML5</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-css3-alt" style="color:#1572B6"></i><h4>CSS3</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-js" style="color:#F7DF1E"></i><h4>JavaScript</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-react" style="color:#61DAFB"></i><h4>React</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-n" style="color:#ffffff"></i><h4>Next.js</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-bootstrap" style="color:#7952B3"></i><h4>Bootstrap</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-wind" style="color:#38BDF8"></i><h4>Tailwind CSS</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-mobile-screen" style="color:#00D4FF"></i><h4>Responsive Design</h4></div>
-        </div>
-      </div>
-
-      <div class="tech-panel" id="tech-backend">
-        <div class="tech-grid">
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-node-js" style="color:#339933"></i><h4>Node.js</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-server" style="color:#00D4FF"></i><h4>Express.js</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-python" style="color:#3776AB"></i><h4>Python</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-fire" style="color:#FF6B35"></i><h4>REST APIs</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-bolt" style="color:#E535AB"></i><h4>GraphQL</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-shield-halved" style="color:#10B981"></i><h4>JWT Auth</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-envelope" style="color:#F59E0B"></i><h4>EmailJS</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-plug" style="color:#7C3AED"></i><h4>WebSockets</h4></div>
-        </div>
-      </div>
-
-      <div class="tech-panel" id="tech-database">
-        <div class="tech-grid">
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-leaf" style="color:#47A248"></i><h4>MongoDB</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-database" style="color:#336791"></i><h4>PostgreSQL</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-database" style="color:#00758F"></i><h4>MySQL</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-database" style="color:#3ECF8E"></i><h4>Supabase</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-fire" style="color:#FFCA28"></i><h4>Firebase</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-bolt" style="color:#DC382D"></i><h4>Redis</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-cloud" style="color:#00D4FF"></i><h4>MongoDB Atlas</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-table" style="color:#10B981"></i><h4>Prisma ORM</h4></div>
-        </div>
-      </div>
-
-      <div class="tech-panel" id="tech-devops">
-        <div class="tech-grid">
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-github" style="color:#f0f0f0"></i><h4>GitHub</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-git-alt" style="color:#F05032"></i><h4>Git</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-docker" style="color:#2496ED"></i><h4>Docker</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-aws" style="color:#FF9900"></i><h4>AWS</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-triangle" style="color:#ffffff"></i><h4>Vercel</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-satellite-dish" style="color:#FF6C37"></i><h4>Postman</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-chrome" style="color:#4285F4"></i><h4>DevTools</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-code" style="color:#007ACC"></i><h4>VS Code</h4></div>
-        </div>
-      </div>
-
-      <div class="tech-panel" id="tech-design">
-        <div class="tech-grid">
-          <div class="tech-card reveal-scale"><i class="fa-brands fa-figma" style="color:#F24E1E"></i><h4>Figma</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-pen-ruler" style="color:#7C3AED"></i><h4>UI/UX Design</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-layer-group" style="color:#00D4FF"></i><h4>Design Systems</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-wand-magic-sparkles" style="color:#F59E0B"></i><h4>Prototyping</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-palette" style="color:#EC4899"></i><h4>Brand Identity</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-mobile-screen-button" style="color:#10B981"></i><h4>Mobile-First</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-universal-access" style="color:#6366F1"></i><h4>Accessibility</h4></div>
-          <div class="tech-card reveal-scale"><i class="fa-solid fa-magnifying-glass" style="color:#F97316"></i><h4>SEO</h4></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========== PROCESS ========== -->
+  <!-- PROCESS -->
   <section id="process">
     <div class="container">
       <div class="section-header reveal">
@@ -238,301 +110,470 @@
         <h2 class="section-title glitch" data-text="Our Process">Our <span class="gradient-text">Process</span></h2>
         <p class="section-sub">A proven methodology to deliver exceptional results</p>
       </div>
-      <div class="process-timeline">
-        <div class="process-step reveal-left">
-          <div class="step-number">01</div>
-          <div class="step-content">
-            <h3>Discovery</h3>
-            <p>We dive deep into your business goals, target audience, and project requirements to create a solid foundation.</p>
-          </div>
+      <div class="process-cards">
+        <div class="process-card reveal-scale">
+          <div class="process-card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="process-card-number">01</div>
+          <h3>Discovery</h3>
+          <p>We dive deep into your business goals, target audience, and requirements to create a solid foundation.</p>
         </div>
-        <div class="process-step reveal-right">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <h3>Design</h3>
-            <p>Our designers craft beautiful, intuitive interfaces that align with your brand and delight your users.</p>
-          </div>
+        <div class="process-card reveal-scale">
+          <div class="process-card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <div class="process-card-number">02</div>
+          <h3>Design</h3>
+          <p>Our designers craft beautiful, intuitive interfaces that align with your brand and delight your users.</p>
         </div>
-        <div class="process-step reveal-left">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <h3>Development</h3>
-            <p>We build scalable, high-performance solutions using cutting-edge technologies and best practices.</p>
-          </div>
+        <div class="process-card reveal-scale">
+          <div class="process-card-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="process-card-number">03</div>
+          <h3>Development</h3>
+          <p>We build scalable, high-performance solutions using cutting-edge technologies and best practices.</p>
         </div>
-        <div class="process-step reveal-right">
-          <div class="step-number">04</div>
-          <div class="step-content">
-            <h3>Launch & Support</h3>
-            <p>We deploy your product and provide ongoing support to ensure long-term success and growth.</p>
-          </div>
+        <div class="process-card reveal-scale">
+          <div class="process-card-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="process-card-number">04</div>
+          <h3>Launch &amp; Support</h3>
+          <p>We deploy your product and provide ongoing support to ensure long-term success and growth.</p>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- ========== SERVICES ========== -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <div class="section-bg-wrap>
- <div class=section-bg-text>services</div>
- </div>
-
+      <div class="section-bg-wrap"><div class="section-bg-text">services</div></div>
+      <div class="section-header reveal">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title glitch" data-text="Our Services">Our <span class="gradient-text">Services</span></h2>
+        <p class="section-sub">Everything you need to build and grow your digital presence</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card reveal-scale">
-          <div class="service-icon">
-            <i class="fa-solid fa-code"></i>
+      <div class="services-scroll-wrap">
+        <button class="services-arrow services-arrow--prev" id="servicesPrev" aria-label="Previous service"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="services-track" id="servicesTrack">
+          <div class="service-card reveal-scale">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Website Development</h3>
+            <p>Custom, responsive websites built with modern technologies. Fast, secure, and optimized for performance.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> React / Next.js</li>
+              <li><i class="fa-solid fa-check"></i> Node.js Backend</li>
+              <li><i class="fa-solid fa-check"></i> REST APIs</li>
+            </ul>
+            <div class="service-number">01</div>
           </div>
-          <h3>Website Development</h3>
-          <p>Custom, responsive websites built with modern technologies. Fast, secure, and optimized for performance.</p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> React / Next.js</li>
-            <li><i class="fa-solid fa-check"></i> Node.js Backend</li>
-            <li><i class="fa-solid fa-check"></i> REST APIs</li>
-          </ul>
-          <div class="service-number">01</div>
-        </div>
-        <div class="service-card reveal-scale">
-          <div class="service-icon">
-            <i class="fa-solid fa-store"></i>
+          <div class="service-card reveal-scale">
+            <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+            <h3>Business Websites</h3>
+            <p>Professional business websites that convert visitors into customers. SEO-optimized and mobile-first.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Landing Pages</li>
+              <li><i class="fa-solid fa-check"></i> E-commerce</li>
+              <li><i class="fa-solid fa-check"></i> SEO Optimization</li>
+            </ul>
+            <div class="service-number">02</div>
           </div>
-          <h3>Business Websites</h3>
-          <p>Professional business websites that convert visitors into customers. SEO-optimized and mobile-first.</p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Landing Pages</li>
-            <li><i class="fa-solid fa-check"></i> E-commerce</li>
-            <li><i class="fa-solid fa-check"></i> SEO Optimization</li>
-          </ul>
-          <div class="service-number">02</div>
-        </div>
-        <div class="service-card reveal-scale">
-          <div class="service-icon">
-            <i class="fa-solid fa-pen-ruler"></i>
+          <div class="service-card reveal-scale">
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>Beautiful, intuitive interfaces designed with user experience at the core. From wireframes to final design.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Figma Design</li>
+              <li><i class="fa-solid fa-check"></i> Prototyping</li>
+              <li><i class="fa-solid fa-check"></i> Design Systems</li>
+            </ul>
+            <div class="service-number">03</div>
           </div>
-          <h3>UI/UX Design</h3>
-          <p>Beautiful, intuitive interfaces designed with user experience at the core. From wireframes to final design.</p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Figma Design</li>
-            <li><i class="fa-solid fa-check"></i> Prototyping</li>
-            <li><i class="fa-solid fa-check"></i> Design Systems</li>
-          </ul>
-          <div class="service-number">03</div>
-        </div>
-        <div class="service-card reveal-scale">
-          <div class="service-icon">
-            <i class="fa-solid fa-rocket"></i>
+          <div class="service-card reveal-scale">
+            <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Startup MVP</h3>
+            <p>Turn your startup idea into a working product. Fast MVP development to validate your concept quickly.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Rapid Prototyping</li>
+              <li><i class="fa-solid fa-check"></i> Full Stack Dev</li>
+              <li><i class="fa-solid fa-check"></i> Launch Ready</li>
+            </ul>
+            <div class="service-number">04</div>
           </div>
-          <h3>Startup MVP</h3>
-          <p>Turn your startup idea into a working product. Fast MVP development to validate your concept quickly.</p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Rapid Prototyping</li>
-            <li><i class="fa-solid fa-check"></i> Full Stack Dev</li>
-            <li><i class="fa-solid fa-check"></i> Launch Ready</li>
-          </ul>
-          <div class="service-number">04</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PROJECTS ========== -->
+  <!-- ========== PROJECTS – ORBIT ========== -->
+  <style>
+    #projects { padding: 80px 0; }
+    #projects .projects-title-wrap { position: relative; text-align: center; margin-bottom: 20px; }
+    #projects .projects-bg-text {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      font-size: clamp(72px, 18vw, 200px); font-weight: 900;
+      color: rgba(255,255,255,0.04); white-space: nowrap; pointer-events: none;
+      letter-spacing: 4px; text-transform: lowercase; z-index: 0;
+      width: 100%; text-align: center;
+    }
+    #projects .projects-header { position: relative; z-index: 1; }
+
+    .orb-scene { display:flex; justify-content:center; padding:40px 0 60px; }
+
+    .orb-sys {
+      position: relative;
+      width: 460px;
+      height: 460px;
+      flex-shrink: 0;
+    }
+
+    /* Scale orbit down on smaller screens */
+    @media (max-width: 500px) {
+      .orb-sys { width: 320px; height: 320px; }
+      .orb-planet { width: 40px; height: 40px; }
+      .orb-planet.icon-type { font-size: 16px; }
+      .orb-ring { top: 20px; left: 20px; right: 20px; bottom: 20px; }
+    }
+    @media (max-width: 360px) {
+      .orb-sys { width: 280px; height: 280px; }
+      .orb-planet { width: 36px; height: 36px; }
+      .orb-planet.icon-type { font-size: 14px; }
+      .orb-ring { top: 18px; left: 18px; right: 18px; bottom: 18px; }
+    }
+    .orb-ring {
+      position: absolute;
+      top: 31px; left: 31px; right: 31px; bottom: 31px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,212,255,0.22);
+      pointer-events: none;
+    }
+    .orb-ring-inner1 {
+      position: absolute;
+      top: 22%; left: 22%; right: 22%; bottom: 22%;
+      border-radius: 50%;
+      border: 1px solid rgba(168,85,247,0.3);
+      pointer-events: none;
+    }
+    .orb-ring-inner2 {
+      position: absolute;
+      top: 38%; left: 38%; right: 38%; bottom: 38%;
+      border-radius: 50%;
+      border: 1px solid rgba(236,72,153,0.25);
+      pointer-events: none;
+    }
+    .orb-hub {
+      position: absolute;
+      width: 120px; height: 120px;
+      top: 50%; left: 50%;
+      margin-top: -60px; margin-left: -60px;
+      border-radius: 50%;
+      background: #0b0b14;
+      border: 2px solid rgba(0,212,255,0.65);
+      box-shadow: 0 0 28px rgba(0,212,255,0.4), 0 0 60px rgba(0,212,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 10;
+    }
+    .orb-hub img { width:100%; height:100%; object-fit:contain; border-radius:50%; }
+
+    /* Each planet is position:absolute, JS sets left/top each frame */
+    .orb-planet {
+      position: absolute;
+      width: 62px; height: 62px;
+      border-radius: 50%;
+      overflow: visible;
+      border: 2.5px solid;
+      background: #0b0b14;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      z-index: 20;
+      cursor: pointer;
+      transition: transform .3s, box-shadow .3s;
+    }
+    /* clip only the image, not the tooltip */
+    .orb-planet .orb-img-wrap {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .orb-planet img { width:100%; height:100%; object-fit:cover; display:block; }
+    .orb-planet.contain img { object-fit:contain; padding:7px; background:#fff; }
+    .orb-planet.icon-type { font-size:24px; }
+    .orb-planet:hover { transform: scale(1.2); z-index:30; }
+
+    /* Tooltip */
+    .orb-tip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%; transform: translateX(-50%);
+      background: rgba(6,6,18,0.97);
+      border: 1.5px solid;
+      border-radius: 10px;
+      padding: 10px 16px;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .2s;
+      z-index: 100;
+      text-align: center;
+      min-width: 150px;
+    }
+    .orb-planet:hover .orb-tip { opacity: 1; }
+    .orb-tip strong { display:block; font-size:14px; font-weight:700; color:#fff; margin-bottom:4px; }
+    .orb-tip-url { display:block; font-size:12px; }
+
+
+  </style>
+
   <section id="projects">
     <div class="container">
       <div class="projects-title-wrap">
-        <div class="projects-bg-text">projects</div>
+        <div class="projects-bg-text">partners</div>
       </div>
 
-      <div class="orbital-wrap reveal">
-        <!-- Center logo -->
-        <div class="orbital-center">
-          <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="orbital-logo-img" />
+      <div class="orb-scene">
+        <div class="orb-sys" id="orbSys">
+          <div class="orb-ring"></div>
+          <div class="orb-ring-inner1"></div>
+          <div class="orb-ring-inner2"></div>
+          <div class="orb-hub"><img src="images/AlphaDevsProjectLogo.png" alt="AlphaDevs" /></div>
+
+          <a href="projects/bikerentalhub.html" class="orb-planet" id="op0"
+             style="border-color:#00d4ff;box-shadow:0 0 14px rgba(0,212,255,.55);">
+            <div class="orb-img-wrap"><img src="images/bikeRH.jpeg" alt="Bike Rental Hub" /></div>
+            <div class="orb-tip" style="border-color:#00d4ff;">
+              <strong>Bike Rental Hub</strong>
+              <span class="orb-tip-url" style="color:#00d4ff;">bikerentalhub.co.in</span>
+            </div>
+          </a>
+
+          <a href="projects/gaminghub.html" class="orb-planet" id="op1"
+             style="border-color:#ec4899;box-shadow:0 0 14px rgba(236,72,153,.55);">
+            <div class="orb-img-wrap"><img src="images/gaminghub.jpeg" alt="Gaming Rental Hub" /></div>
+            <div class="orb-tip" style="border-color:#ec4899;">
+              <strong>Gaming Rental Hub</strong>
+              <span class="orb-tip-url" style="color:#ec4899;">gamingrentalhub.com</span>
+            </div>
+          </a>
+
+          <a href="projects/sriganeshbikerental.html" class="orb-planet contain" id="op2"
+             style="border-color:#a855f7;box-shadow:0 0 14px rgba(168,85,247,.55);">
+            <div class="orb-img-wrap"><img src="images/sriganeshlogo.png" alt="Sri Ganesh" /></div>
+            <div class="orb-tip" style="border-color:#a855f7;">
+              <strong>Sri Ganesh Bike Rental</strong>
+              <span class="orb-tip-url" style="color:#a855f7;">sriganeshbikerental.in</span>
+            </div>
+          </a>
+
+          <a href="projects/interiorconcepts.html" class="orb-planet icon-type" id="op3"
+             style="border-color:#f59e0b;box-shadow:0 0 14px rgba(245,158,11,.55);color:#f59e0b;">
+            <div class="orb-img-wrap" style="overflow:visible;"><i class="fa-solid fa-couch"></i></div>
+            <div class="orb-tip" style="border-color:#f59e0b;">
+              <strong>Interior Concepts</strong>
+              <span class="orb-tip-url" style="color:#f59e0b;">interiorconcepts-iota.vercel.app</span>
+            </div>
+          </a>
+
+          <a href="projects/picklehouse.html" class="orb-planet contain" id="op4"
+             style="border-color:#22c55e;box-shadow:0 0 14px rgba(34,197,94,.55);">
+            <div class="orb-img-wrap"><img src="images/pickleHouseLogo.png" alt="Pickle House" /></div>
+            <div class="orb-tip" style="border-color:#22c55e;">
+              <strong>Pickle House</strong>
+              <span class="orb-tip-url" style="color:#22c55e;">picklehouse.vercel.app</span>
+            </div>
+          </a>
+
+          <a href="projects/suvarnaevents.html" class="orb-planet" id="op5"
+             style="border-color:#f43f5e;box-shadow:0 0 14px rgba(244,63,94,.55);">
+            <div class="orb-img-wrap"><img src="images/SuvarnaLogo.png" alt="Suvarna Events" style="object-fit:cover;" /></div>
+            <div class="orb-tip" style="border-color:#f43f5e;">
+              <strong>Suvarna Events</strong>
+              <span class="orb-tip-url" style="color:#f43f5e;">suvarnaevents.vercel.app</span>
+            </div>
+          </a>
+
+          <a href="projects/taara.html" class="orb-planet" id="op6"
+             style="border-color:#818cf8;box-shadow:0 0 14px rgba(129,140,248,.55);">
+            <div class="orb-img-wrap"><img src="images/TaaraLogo.png" alt="Taara" style="object-fit:cover;" /></div>
+            <div class="orb-tip" style="border-color:#818cf8;">
+              <strong>Taara</strong>
+              <span class="orb-tip-url" style="color:#818cf8;">taara-five.vercel.app</span>
+            </div>
+          </a>
         </div>
-
-        <!-- Orbit rings -->
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
-        <div class="orbit orbit-3"></div>
-
-        <!-- Orbiting project nodes -->
-        <a href="projects/bikerentalhub.html" class="orbit-node" style="--angle:0deg; --orbit-r:180px; --duration:18s; --color:#00d4ff;" aria-label="Bike Rental Hub">
-          <div class="orbit-node-inner">
-            <img src="images/bikeRH.jpeg" alt="Bike Rental Hub" style="width:38px;height:38px;object-fit:contain;border-radius:50%;" />
-          </div>
-          <div class="orbit-node-tooltip">
-            <strong>Bike Rental Hub</strong>
-            <span>bikerentalhub.co.in</span>
-          </div>
-        </a>
-
-        <a href="projects/sriganeshbikerental.html" class="orbit-node" style="--angle:90deg; --orbit-r:180px; --duration:18s; --color:#7c3aed;" aria-label="Sri Ganesh Bike Rental">
-          <div class="orbit-node-inner">
-            <img src="images/sriganeshlogo.png" alt="Sri Ganesh Bike Rental" style="width:38px;height:38px;object-fit:contain;border-radius:50%;" />
-          </div>
-          <div class="orbit-node-tooltip">
-            <strong>Sri Ganesh Bike Rental</strong>
-            <span>sriganeshbikerental.in</span>
-          </div>
-        </a>
-
-        <a href="projects/gaminghub.html" class="orbit-node" style="--angle:180deg; --orbit-r:180px; --duration:18s; --color:#ff006e;" aria-label="Gaming Rental Hub">
-          <div class="orbit-node-inner">
-            <img src="images/gaminghub.jpeg" alt="Gaming Rental Hub" style="width:38px;height:38px;object-fit:contain;border-radius:50%;" />
-          </div>
-          <div class="orbit-node-tooltip">
-            <strong>Gaming Rental Hub</strong>
-            <span>gamingrentalhub.com</span>
-          </div>
-        </a>
-
-        <a href="https://interiorconcepts-iota.vercel.app/" target="_blank" class="orbit-node" style="--angle:270deg; --orbit-r:180px; --duration:18s; --color:#f59e0b;" aria-label="Interior Concepts">
-          <div class="orbit-node-inner orbit-node-icon">
-            <i class="fa-solid fa-couch"></i>
-          </div>
-          <div class="orbit-node-tooltip">
-            <strong>Interior Concepts</strong>
-            <span>interiorconcepts-iota.vercel.app</span>
-          </div>
-        </a>
-
-
       </div>
 
 
     </div>
   </section>
 
-  <!-- ========== STATS ========== -->
+  <script>
+  (function(){
+    var sys = document.getElementById('orbSys');
+    if (!sys) return;
+    var planets = [document.getElementById('op0'),document.getElementById('op1'),document.getElementById('op2'),document.getElementById('op3'),document.getElementById('op4'),document.getElementById('op5'),document.getElementById('op6')];
+    var startAngles = [-45, 45, 225, 135, -180, 0, 90];
+    var speed = 0.4;
+    var angles = startAngles.slice();
+    var anyHovered = false;
+
+    planets.forEach(function(p){
+      p.addEventListener('mouseenter', function(){ anyHovered = true; });
+      p.addEventListener('mouseleave', function(){ anyHovered = false; });
+    });
+
+    function tick(){
+      /* read live size so it works at any breakpoint */
+      var w = sys.offsetWidth;
+      var cx = w / 2;
+      var cy = w / 2;
+      var size = planets[0].offsetWidth; /* read actual rendered size */
+      var radius = cx - size / 2;
+      planets.forEach(function(p, i){
+        if (!anyHovered) angles[i] += speed;
+        var rad = angles[i] * Math.PI / 180;
+        var x = cx + Math.cos(rad) * radius - size/2;
+        var y = cy + Math.sin(rad) * radius - size/2;
+        p.style.left = x + 'px';
+        p.style.top  = y + 'px';
+      });
+      requestAnimationFrame(tick);
+    }
+    tick();
+  })();
+  </script>
+
+  <!-- STATS -->
   <section id="stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-code-branch"></i></div>
-          <div class="stat-number" data-target="10">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Projects Completed</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
-          <div class="stat-number" data-target="8">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Happy Clients</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
-          <div class="stat-number" data-target="2">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
-          <div class="stat-number" data-target="500">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Hours Coded</div>
-        </div>
+        <div class="stat-card reveal"><div class="stat-icon"><i class="fa-solid fa-code-branch"></i></div><div class="stat-number" data-target="10">0</div><div class="stat-plus">+</div><div class="stat-label">Projects Completed</div></div>
+        <div class="stat-card reveal"><div class="stat-icon"><i class="fa-solid fa-users"></i></div><div class="stat-number" data-target="8">0</div><div class="stat-plus">+</div><div class="stat-label">Happy Clients</div></div>
+        <div class="stat-card reveal"><div class="stat-icon"><i class="fa-solid fa-trophy"></i></div><div class="stat-number" data-target="100">0</div><div class="stat-plus">%</div><div class="stat-label">Client Satisfaction</div></div>
+        <div class="stat-card reveal"><div class="stat-icon"><i class="fa-solid fa-headset"></i></div><div class="stat-number" data-target="24">0</div><div class="stat-plus">/7</div><div class="stat-label">Support Available</div></div>
       </div>
     </div>
   </section>
 
+  <!-- WHY CHOOSE US -->
+  <section id="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Why AlphaDevs?</span>
+        <h2 class="section-title">Why Choose <span class="gradient-text">Us</span></h2>
+        <p class="section-sub">We don't just build websites &mdash; we build growth engines</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal-scale"><div class="why-card-icon"><i class="fa-solid fa-tag"></i></div><h4>Affordable Pricing</h4><p>Premium quality at startup-friendly prices. No hidden costs, transparent quotes every time.</p></div>
+        <div class="why-card reveal-scale"><div class="why-card-icon"><i class="fa-solid fa-bolt"></i></div><h4>Fast Delivery</h4><p>Most projects delivered in 1&ndash;3 weeks. We respect your deadlines, always.</p></div>
+        <div class="why-card reveal-scale"><div class="why-card-icon"><i class="fa-solid fa-palette"></i></div><h4>Modern UI/UX</h4><p>Clean, professional designs that impress visitors, build trust, and convert leads.</p></div>
+        <div class="why-card reveal-scale"><div class="why-card-icon"><i class="fa-solid fa-mobile-screen"></i></div><h4>Mobile Responsive</h4><p>Every project looks and works perfectly on all devices &mdash; phones, tablets, desktops.</p></div>
+        <div class="why-card reveal-scale"><div class="why-card-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h4>SEO-Friendly</h4><p>Built with proper structure, meta tags, and performance so Google ranks your site.</p></div>
+        <div class="why-card reveal-scale"><div class="why-card-icon"><i class="fa-solid fa-headset"></i></div><h4>Ongoing Support</h4><p>Post-launch support for updates, bug fixes, and feature additions. We're always here.</p></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title"><span class="gradient-text">Pricing</span></h2>
+        <p class="section-sub">No hidden costs. Choose the plan that fits your needs.</p>
+      </div>
+      <div class="pricing-grid">
 
+        <div class="pricing-card reveal-scale">
+          <div class="pricing-card-header"><div class="pricing-icon"><i class="fa-solid fa-seedling"></i></div><h3>Starter Website</h3></div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">&#8377;3,999</span></div>
+          <p class="pricing-desc">Perfect for freelancers and small businesses getting online for the first time.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Up to 3 Pages</li>
+            <li><i class="fa-solid fa-check"></i> Mobile Responsive</li>
+            <li><i class="fa-solid fa-check"></i> Contact Form</li>
+            <li><i class="fa-solid fa-check"></i> Basic SEO Setup</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp Button</li>
+            <li><i class="fa-solid fa-check"></i> 5-Day Delivery</li>
+          </ul>
+          <a href="#contact" class="pricing-cta pricing-cta--outline">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
+        <div class="pricing-card reveal-scale">
+          <div class="pricing-card-header"><div class="pricing-icon"><i class="fa-solid fa-file-code"></i></div><h3>Static Website</h3></div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">&#8377;7,999</span></div>
+          <p class="pricing-desc">Perfect for personal portfolios and simple landing pages with a clean online presence.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Up to 5 Pages</li>
+            <li><i class="fa-solid fa-check"></i> Mobile Responsive</li>
+            <li><i class="fa-solid fa-check"></i> Contact Form</li>
+            <li><i class="fa-solid fa-check"></i> Basic SEO Setup</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp Button</li>
+            <li><i class="fa-solid fa-check"></i> 7-Day Delivery</li>
+          </ul>
+          <a href="#contact" class="pricing-cta pricing-cta--outline">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
+        <div class="pricing-card pricing-card--featured reveal-scale">
+          <div class="pricing-popular-tag">&#11088; Most Popular</div>
+          <div class="pricing-card-header"><div class="pricing-icon pricing-icon--featured"><i class="fa-solid fa-building"></i></div><h3>Business Website</h3></div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">&#8377;14,999</span></div>
+          <p class="pricing-desc">For growing businesses that want a premium online presence that generates leads.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Up to 10 Pages</li>
+            <li><i class="fa-solid fa-check"></i> Premium UI/UX Design</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Animations</li>
+            <li><i class="fa-solid fa-check"></i> Full SEO Optimization</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp + Call Integration</li>
+            <li><i class="fa-solid fa-check"></i> Google Maps</li>
+            <li><i class="fa-solid fa-check"></i> 30-Day Free Support</li>
+          </ul>
+          <a href="#contact" class="pricing-cta pricing-cta--filled">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
+        <div class="pricing-card reveal-scale">
+          <div class="pricing-card-header"><div class="pricing-icon"><i class="fa-solid fa-cart-shopping"></i></div><h3>E-Commerce Website</h3></div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">&#8377;24,999</span></div>
+          <p class="pricing-desc">Full-featured online store with product management, cart, and payment integration.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited Products</li>
+            <li><i class="fa-solid fa-check"></i> Payment Gateway</li>
+            <li><i class="fa-solid fa-check"></i> Admin Dashboard</li>
+            <li><i class="fa-solid fa-check"></i> Order Management</li>
+            <li><i class="fa-solid fa-check"></i> Advanced SEO</li>
+            <li><i class="fa-solid fa-check"></i> 60-Day Free Support</li>
+          </ul>
+          <a href="#contact" class="pricing-cta pricing-cta--outline">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
+        <div class="pricing-card pricing-card--custom reveal-scale">
+          <div class="pricing-card-header"><div class="pricing-icon pricing-icon--custom"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Custom Solutions</h3></div>
+          <div class="pricing-price"><span class="price-from">Tailored for you</span><span class="price-amount" style="font-size:28px;">Contact Us</span></div>
+          <p class="pricing-desc">Mobile apps, SaaS platforms, AI integrations &mdash; any complex requirement.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Mobile Apps</li>
+            <li><i class="fa-solid fa-check"></i> SaaS Platforms</li>
+            <li><i class="fa-solid fa-check"></i> AI Integration</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated Support</li>
+          </ul>
+          <a href="https://wa.me/916300003773?text=Hi%2C%20I%20have%20a%20custom%20project%20I%27d%20like%20to%20discuss." target="_blank" class="pricing-cta pricing-cta--outline"><i class="fa-brands fa-whatsapp"></i> Discuss Project</a>
+        </div>
 
+      </div>
+      <p class="pricing-note reveal">* Prices are starting points. Final cost depends on scope. <a href="#contact">Contact us</a> for a free custom quote.</p>
+    </div>
+  </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- TESTIMONIALS -->
   <section id="testimonials">
     <div class="container">
- <div class=section-bg-wrap>
- <div class=section-bg-text>feedbacks</div>
- </div>
-
+      <div class="section-header reveal">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Our Clients <span class="gradient-text">Say</span></h2>
+        <p class="section-sub">Real feedback from real people we've worked with</p>
       </div>
-
-      <!-- Add Review Button -->
       <div class="reviews-action reveal">
-        <button class="btn-primary" id="openReviewModal">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <span>Write a Review</span>
-        </button>
+        <button class="btn-primary" id="openReviewModal"><i class="fa-solid fa-pen-to-square"></i><span>Write a Review</span></button>
       </div>
-
-      <!-- Reviews Carousel -->
       <div class="testimonials-carousel-wrap">
         <div class="testimonials-grid" id="reviewsGrid">
-          <div class="reviews-loading">
-            <i class="fa-solid fa-spinner fa-spin"></i>
-            <span>Loading reviews...</span>
-          </div>
+          <div class="reviews-loading"><i class="fa-solid fa-spinner fa-spin"></i><span>Loading reviews...</span></div>
         </div>
         <div class="carousel-controls" id="carouselControls" style="display:none;">
           <button class="carousel-btn" id="carouselPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
@@ -540,195 +581,81 @@
           <button class="carousel-btn" id="carouselNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
-
-      <!-- Empty State -->
       <div class="reviews-empty" id="reviewsEmpty" style="display:none;">
-        <i class="fa-regular fa-comment-dots"></i>
-        <p>No reviews yet. Be the first to share your experience!</p>
+        <i class="fa-regular fa-comment-dots"></i><p>No reviews yet. Be the first to share your experience!</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== REVIEW MODAL ========== -->
+  <!-- REVIEW MODAL -->
   <div class="modal-overlay" id="reviewModal">
     <div class="modal-box">
-      <button class="modal-close" id="closeReviewModal" aria-label="Close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+      <button class="modal-close" id="closeReviewModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <h3>Share Your Experience</h3>
       <p>Your honest feedback means a lot!</p>
       <form id="reviewForm">
-        <div class="form-group">
-          <input type="text" id="reviewName" placeholder="Your Name" required />
-          <i class="fa-solid fa-user form-icon"></i>
-        </div>
-        <div class="form-group">
-          <input type="text" id="reviewRole" placeholder="Your Role / Company" />
-          <i class="fa-solid fa-briefcase form-icon"></i>
-        </div>
-        <div class="form-group">
-          <textarea id="reviewMessage" rows="4" placeholder="Write your review..." required></textarea>
-          <i class="fa-solid fa-message form-icon textarea-icon"></i>
-        </div>
+        <div class="form-group"><input type="text" id="reviewName" placeholder="Your Name" required /><i class="fa-solid fa-user form-icon"></i></div>
+        <div class="form-group"><input type="text" id="reviewRole" placeholder="Your Role / Company" /><i class="fa-solid fa-briefcase form-icon"></i></div>
+        <div class="form-group"><textarea id="reviewMessage" rows="4" placeholder="Write your review..." required></textarea><i class="fa-solid fa-message form-icon textarea-icon"></i></div>
         <div class="star-rating-wrap">
           <span>Rating:</span>
           <div class="star-rating" id="starRating">
-            <i class="fa-solid fa-star" data-value="1"></i>
-            <i class="fa-solid fa-star" data-value="2"></i>
-            <i class="fa-solid fa-star" data-value="3"></i>
-            <i class="fa-solid fa-star" data-value="4"></i>
+            <i class="fa-solid fa-star" data-value="1"></i><i class="fa-solid fa-star" data-value="2"></i>
+            <i class="fa-solid fa-star" data-value="3"></i><i class="fa-solid fa-star" data-value="4"></i>
             <i class="fa-solid fa-star" data-value="5"></i>
           </div>
         </div>
-        <button type="submit" class="btn-primary submit-btn" id="reviewSubmitBtn">
-          <span>Submit Review</span>
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
+        <button type="submit" class="btn-primary submit-btn" id="reviewSubmitBtn"><span>Submit Review</span><i class="fa-solid fa-paper-plane"></i></button>
       </form>
     </div>
   </div>
 
-  <!-- ========== FAQ ========== -->
+  <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">FAQ</span>
-        <h2 class="section-title glitch" data-text="Common Questions">Common <span class="gradient-text">Questions</span></h2>
+        <h2 class="section-title">Common <span class="gradient-text">Questions</span></h2>
         <p class="section-sub">Everything you need to know before reaching out</p>
       </div>
       <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            <span>How long does a project take?</span>
-            <i class="fa-solid fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>It depends on the scope. A landing page takes 1–2 weeks. A full business website takes 3–4 weeks. A full-stack application or MVP typically takes 6–10 weeks. I'll give you a clear timeline after our initial call.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            <span>What's your development process?</span>
-            <i class="fa-solid fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>I follow a 4-step process: Discovery (understanding your goals) → Design (wireframes & UI) → Development (building & testing) → Launch & Support (deployment + handoff). You're involved at every stage.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            <span>Do you offer maintenance after launch?</span>
-            <i class="fa-solid fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. I offer post-launch support for bug fixes, updates, and feature additions. Maintenance packages are available monthly or on a per-request basis depending on your needs.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            <span>How do payments work?</span>
-            <i class="fa-solid fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>I typically work with a 50% upfront deposit and 50% on delivery. For larger projects, milestone-based payments can be arranged. I accept bank transfers, UPI, and international payments via PayPal.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            <span>Will I own the code after the project?</span>
-            <i class="fa-solid fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Absolutely. Once the project is fully paid, you own 100% of the source code, assets, and intellectual property. I'll hand over everything including the repository and deployment credentials.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question">
-            <span>Do you work with international clients?</span>
-            <i class="fa-solid fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Yes, I work with clients globally. Communication is primarily via WhatsApp, email, or video calls. I'm flexible with time zones and ensure regular updates throughout the project.</p>
-          </div>
-        </div>
+        <div class="faq-item reveal"><button class="faq-question"><span>How long does a project take?</span><i class="fa-solid fa-plus faq-icon"></i></button><div class="faq-answer"><p>It depends on the scope. A landing page takes 1&ndash;2 weeks. A full business website takes 3&ndash;4 weeks. A full-stack application or MVP typically takes 6&ndash;10 weeks. I'll give you a clear timeline after our initial call.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>What's your development process?</span><i class="fa-solid fa-plus faq-icon"></i></button><div class="faq-answer"><p>I follow a 4-step process: Discovery &rarr; Design &rarr; Development &rarr; Launch &amp; Support. You're involved at every stage with regular updates.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Do you offer maintenance after launch?</span><i class="fa-solid fa-plus faq-icon"></i></button><div class="faq-answer"><p>Yes. I offer post-launch support for bug fixes, updates, and feature additions. Maintenance packages are available monthly or on a per-request basis.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>How do payments work?</span><i class="fa-solid fa-plus faq-icon"></i></button><div class="faq-answer"><p>I work with a 50% upfront deposit and 50% on delivery. For larger projects, milestone-based payments can be arranged. I accept bank transfers, UPI, and PayPal.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Will I own the code after the project?</span><i class="fa-solid fa-plus faq-icon"></i></button><div class="faq-answer"><p>Absolutely. Once fully paid, you own 100% of the source code, assets, and intellectual property. I hand over everything including the repository and deployment credentials.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Do you work with international clients?</span><i class="fa-solid fa-plus faq-icon"></i></button><div class="faq-answer"><p>Yes, I work with clients globally. Communication via WhatsApp, email, or video calls. I'm flexible with time zones and ensure regular project updates.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title glitch" data-text="Contact Me">Contact <span class="gradient-text">Me</span></h2>
-        <p class="section-sub">Have a project in mind? Let's build something great together.</p>
+        <h2 class="section-title">Contact <span class="gradient-text">Us</span></h2>
+        <p class="section-sub">Have a project in mind? We'd love to hear about it.</p>
       </div>
-
-      <!-- Open to Work Card -->
       <div class="open-to-work reveal">
-        <div class="otw-status">
-          <span class="otw-dot"></span>
-          <span>Open to Work</span>
-        </div>
+        <div class="otw-status"><span class="otw-dot"></span><span>Open to Work</span></div>
         <div class="otw-details">
-          <div class="otw-item">
-            <i class="fa-solid fa-calendar-check"></i>
-            <div>
-              <span class="otw-label">Availability</span>
-              <span class="otw-value">Immediate</span>
-            </div>
-          </div>
-          <div class="otw-item">
-            <i class="fa-solid fa-clock"></i>
-            <div>
-              <span class="otw-label">Response Time</span>
-              <span class="otw-value">Within 2 hours</span>
-            </div>
-          </div>
-          <div class="otw-item">
-            <i class="fa-brands fa-whatsapp"></i>
-            <div>
-              <span class="otw-label">Preferred Contact</span>
-              <span class="otw-value">WhatsApp / Email</span>
-            </div>
-          </div>
-          <div class="otw-item">
-            <i class="fa-solid fa-earth-asia"></i>
-            <div>
-              <span class="otw-label">Work Type</span>
-              <span class="otw-value">Remote &amp; On-site</span>
-            </div>
-          </div>
+          <div class="otw-item"><i class="fa-solid fa-calendar-check"></i><div><span class="otw-label">Availability</span><span class="otw-value">Immediate</span></div></div>
+          <div class="otw-item"><i class="fa-solid fa-clock"></i><div><span class="otw-label">Response Time</span><span class="otw-value">Within 2 hours</span></div></div>
+          <div class="otw-item"><i class="fa-brands fa-whatsapp"></i><div><span class="otw-label">Preferred Contact</span><span class="otw-value">WhatsApp / Email</span></div></div>
+          <div class="otw-item"><i class="fa-solid fa-earth-asia"></i><div><span class="otw-label">Work Type</span><span class="otw-value">Remote &amp; On-site</span></div></div>
         </div>
       </div>
-
       <div class="contact-grid">
         <div class="contact-info reveal-left">
           <h3>Let's Talk Business</h3>
           <p>I'm currently available for freelance work and exciting full-time opportunities. If you have a project that needs some creative work, I'd love to hear about it.</p>
           <p class="last-active"><i class="fa-solid fa-circle" style="color:#10b981;font-size:8px;"></i> Usually responds within 2 hours &mdash; last active today</p>
           <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div>
-                <span>Email</span>
-                <a href="mailto:vsmakkalvar@gmail.com">vsmakkalvar@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <div>
-                <span>WhatsApp</span>
-                <a href="https://wa.me/916300003773" target="_blank">+91 6300003773</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <span>Location</span>
-                <a>Hyderabad, Telangana, India</a>
-              </div>
-            </div>
+            <div class="contact-item"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><span>Email</span><a href="mailto:vsmakkalvar@gmail.com">vsmakkalvar@gmail.com</a></div></div>
+            <div class="contact-item"><div class="contact-icon contact-icon--wa"><i class="fa-brands fa-whatsapp"></i></div><div><span>WhatsApp</span><a href="https://wa.me/916300003773" target="_blank">+91 6300003773</a></div></div>
+            <div class="contact-item"><div class="contact-icon contact-icon--call"><i class="fa-solid fa-phone"></i></div><div><span>Call Us</span><a href="tel:+916300003773">+91 6300003773</a></div></div>
+            <div class="contact-item"><div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div><div><span>Location</span><span>Hyderabad, Telangana, India</span></div></div>
           </div>
           <div class="contact-socials">
             <a href="https://github.com/VenkyCodeX" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -737,9 +664,10 @@
             <a href="https://x.com/VMakkalwar40985" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://www.facebook.com/profile.php?id=100094862996593" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           </div>
-          <a href="https://wa.me/916300003773?text=Hi%20Venkat%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" class="whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-          </a>
+          <div class="contact-action-row">
+            <a href="https://wa.me/916300003773?text=Hi%20Venkat%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            <a href="tel:+916300003773" class="call-now-btn"><i class="fa-solid fa-phone"></i> Call Now</a>
+          </div>
         </div>
         <div class="contact-form-wrap reveal-right">
           <form id="contactForm" action="https://formsubmit.co/vsmakkalvar@gmail.com" method="POST">
@@ -747,26 +675,11 @@
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://alphadevs.in/#contact" />
-            <div class="form-group">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <i class="fa-solid fa-user form-icon"></i>
-            </div>
-            <div class="form-group">
-              <input type="email" name="Email" placeholder="Your Email" required />
-              <i class="fa-solid fa-envelope form-icon"></i>
-            </div>
-            <div class="form-group">
-              <input type="text" name="Subject" placeholder="Subject" />
-              <i class="fa-solid fa-tag form-icon"></i>
-            </div>
-            <div class="form-group">
-              <textarea name="Message" rows="5" placeholder="Your Message..." required></textarea>
-              <i class="fa-solid fa-message form-icon textarea-icon"></i>
-            </div>
-            <button type="submit" class="btn-primary submit-btn">
-              <span>Send Message</span>
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
+            <div class="form-group"><input type="text" name="Name" placeholder="Your Name" required /><i class="fa-solid fa-user form-icon"></i></div>
+            <div class="form-group"><input type="email" name="Email" placeholder="Your Email" required /><i class="fa-solid fa-envelope form-icon"></i></div>
+            <div class="form-group"><input type="text" name="Subject" placeholder="Subject" /><i class="fa-solid fa-tag form-icon"></i></div>
+            <div class="form-group"><textarea name="Message" rows="5" placeholder="Your Message..." required></textarea><i class="fa-solid fa-message form-icon textarea-icon"></i></div>
+            <button type="submit" class="btn-primary submit-btn"><span>Send Message</span><i class="fa-solid fa-paper-plane"></i></button>
             <span id="form-msg"></span>
           </form>
         </div>
@@ -774,14 +687,11 @@
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="footer-container">
       <div class="footer-top">
-        <a href="#hero" class="footer-logo">
-          <img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="footer-logo-img" />
-          <span class="footer-logo-title">Alpha<span class="logo-accent">Devs</span></span>
-        </a>
+        <a href="#hero" class="footer-logo"><img src="images/AlphaDev_logo.png" alt="AlphaDevs" class="footer-logo-img" /><span class="footer-logo-title">Alpha<span class="logo-accent">Devs</span></span></a>
         <p>Building next-generation digital products that drive business growth.</p>
         <div class="footer-socials">
           <a href="https://github.com/VenkyCodeX" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -791,49 +701,29 @@
         </div>
         <div class="footer-cta-block">
           <p class="footer-cta-text">Let's build something great together.</p>
-          <a href="#contact" class="btn-primary footer-cta-btn">
-            <i class="fa-solid fa-rocket"></i> Start a Project
-          </a>
+          <a href="#contact" class="btn-primary footer-cta-btn"><i class="fa-solid fa-rocket"></i> Start a Project</a>
         </div>
       </div>
       <div class="footer-links">
-        <a href="#hero">Home</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#hero">Home</a><a href="#services">Services</a><a href="#projects">Partners</a>
+        <a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AlphaDevs. Crafted with <i class="fa-solid fa-heart"></i> by AlphaDevs Team. All rights reserved.</p>
-        <a href="#hero" class="back-to-top" aria-label="Back to top">
-          <i class="fa-solid fa-arrow-up"></i>
-          <span class="back-to-top-label">Top</span>
-        </a>
+        <p>&#169; 2026 AlphaDevs. Crafted with <i class="fa-solid fa-heart"></i> by AlphaDevs Team. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i><span class="back-to-top-label">Top</span></a>
       </div>
     </div>
   </footer>
 
-  <!-- MOBILE BOTTOM NAV -->
   <nav class="mobile-bottom-nav" id="mobileBottomNav">
     <div class="mbn-pill" id="mbnPill"></div>
-    <a href="#hero" class="mbn-item">
-      <i class="fa-solid fa-house"></i>
-      <span>Home</span>
-    </a>
-    <a href="#projects" class="mbn-item">
-      <i class="fa-solid fa-briefcase"></i>
-      <span>Work</span>
-    </a>
-    <a href="#contact" class="mbn-item mbn-cta">
-      <i class="fa-solid fa-paper-plane"></i>
-      <span>Contact</span>
-    </a>
+    <a href="#hero" class="mbn-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="#projects" class="mbn-item"><i class="fa-solid fa-briefcase"></i><span>Work</span></a>
+    <a href="#contact" class="mbn-item mbn-cta"><i class="fa-solid fa-paper-plane"></i><span>Contact</span></a>
   </nav>
 
-  <!-- FLOATING WHATSAPP -->
   <a href="https://wa.me/916300003773?text=Hi%20there%2C%20I%20came%20from%20your%20website%20AlphaDevs%20%E2%80%94%20I%27d%20like%20to%20discuss%20a%20project%20with%20you!" target="_blank" class="float-wa" aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>Chat with us</span>
+    <i class="fa-brands fa-whatsapp"></i><span>Chat with us</span>
   </a>
 
   <script src="reviews.js"></script>

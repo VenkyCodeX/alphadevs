@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Business Website Development Hyderabad | From ₹4,999 | AlphaDevs</title>
+  <meta name="description" content="Get a professional business website starting from ₹4,999. Fast delivery in 7 days, mobile responsive, SEO-friendly. Based in Hyderabad. Free consultation available." />
+  <meta name="keywords" content="business website development Hyderabad, website design Hyderabad, affordable website development, professional website India" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://alphadevs.in/business-website" />
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="Business Website Development | AlphaDevs Hyderabad" />
+  <meta property="og:description" content="Professional business websites from ₹4,999. Fast delivery, SEO-friendly, mobile responsive." />
+  <meta property="og:image" content="https://alphadevs.in/images/AlphaDev_logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alphadevs.in/business-website" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Business Website Development",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "AlphaDevs",
+      "telephone": "+916300003773",
+      "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressCountry": "IN" }
+    },
+    "offers": { "@type": "Offer", "price": "4999", "priceCurrency": "INR", "description": "Starter business website" }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="images/AlphaDev_logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Landing Page Specific Overrides */
+    .lp-nav { position: sticky; top: 0; z-index: 1000; background: rgba(10,10,10,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+    .lp-nav-wrap { background: rgba(10,10,10,0.97); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+    .lp-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .lp-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+    .lp-logo span { font-size: 20px; font-weight: 800; color: var(--color-text); }
+    .lp-logo span em { font-style: normal; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .lp-nav-cta { display: flex; gap: 12px; align-items: center; }
+
+    /* Hero LP */
+    .lp-hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; padding: 80px 20px 60px; background: linear-gradient(135deg, var(--color-dark) 0%, #1a0033 50%, var(--color-dark) 100%); position: relative; overflow: hidden; text-align: center; }
+    .lp-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(0,212,255,0.1), transparent 60%); }
+    .lp-hero-content { position: relative; z-index: 1; max-width: 900px; }
+    .lp-hero-badge { display: inline-flex; align-items: center; gap: 10px; padding: 10px 22px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.25); border-radius: 50px; font-size: 13px; font-weight: 600; color: var(--color-primary); margin-bottom: 28px; }
+    .lp-hero h1 { font-size: clamp(32px,6vw,64px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
+    .lp-hero p { font-size: 18px; color: var(--color-text-muted); line-height: 1.7; max-width: 680px; margin: 0 auto 36px; }
+    .lp-hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+    .lp-trust-row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .lp-trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--color-text-muted); font-weight: 600; }
+    .lp-trust-item i { color: #10b981; }
+
+    /* Before/After */
+    .ba-section { padding: 80px 0; }
+    .ba-grid { display: grid; grid-template-columns: 1fr 80px 1fr; gap: 0; align-items: center; }
+    .ba-card { padding: 32px; border-radius: 20px; }
+    .ba-before { background: rgba(239,68,68,0.05); border: 2px solid rgba(239,68,68,0.2); }
+    .ba-after { background: rgba(16,185,129,0.05); border: 2px solid rgba(16,185,129,0.2); }
+    .ba-label { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .ba-before .ba-label { background: rgba(239,68,68,0.15); color: #ef4444; }
+    .ba-after .ba-label { background: rgba(16,185,129,0.15); color: #10b981; }
+    .ba-card h3 { font-size: 20px; margin-bottom: 16px; }
+    .ba-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .ba-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--color-text-muted); }
+    .ba-before .ba-list li i { color: #ef4444; }
+    .ba-after .ba-list li i { color: #10b981; }
+    .ba-arrow { display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--color-primary); }
+
+    /* Benefits */
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .benefit-card { padding: 28px; background: rgba(255,255,255,0.02); border: 1px solid var(--color-border); border-radius: 16px; transition: var(--transition-smooth); }
+    .benefit-card:hover { border-color: var(--color-primary); transform: translateY(-4px); }
+    .benefit-icon { font-size: 32px; color: var(--color-primary); margin-bottom: 14px; }
+    .benefit-card h3 { font-size: 17px; margin-bottom: 8px; }
+    .benefit-card p { font-size: 13px; color: var(--color-text-muted); line-height: 1.7; }
+
+    /* LP sticky CTA bar */
+    .lp-sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1001; background: rgba(10,10,10,0.97); border-top: 1px solid var(--color-border); padding: 12px 20px; display: flex; align-items: center; justify-content: center; gap: 16px; backdrop-filter: blur(10px); }
+    .lp-sticky-cta p { font-size: 14px; font-weight: 700; margin: 0; }
+    @media (max-width: 600px) {
+      .ba-grid { grid-template-columns: 1fr; }
+      .ba-arrow { transform: rotate(90deg); padding: 16px 0; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .lp-hero h1 { font-size: 28px; }
+      .lp-hero p { font-size: 15px; }
+      .lp-sticky-cta { flex-direction: column; gap: 8px; padding: 10px 16px; }
+      .lp-sticky-cta p { font-size: 12px; }
+    }
+    body { padding-bottom: 80px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="lp-nav-wrap">
+    <div class="lp-nav">
+      <a href="index.html" class="lp-logo">
+        <img src="images/AlphaDev_logo.png" alt="AlphaDevs" />
+        <span>Alpha<em>Devs</em></span>
+      </a>
+      <div class="lp-nav-cta">
+        <a href="tel:+916300003773" class="btn-secondary" style="padding:10px 16px;font-size:13px;">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+        <a href="https://wa.me/916300003773?text=Hi%2C%20I%20saw%20your%20business%20website%20page%20and%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn-primary" style="padding:10px 16px;font-size:13px;">
+          <i class="fa-brands fa-whatsapp"></i> Free Consult
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="lp-hero">
+    <div class="lp-hero-content">
+      <div class="lp-hero-badge">
+        <span style="width:8px;height:8px;background:#10b981;border-radius:50%;animation:pulse 2s infinite;"></span>
+        Website Development Company — Hyderabad
+      </div>
+      <h1>Get Your Business a <span class="gradient-text">Professional Website</span> That Attracts Customers</h1>
+      <p>Stop losing customers to competitors with better websites. We build fast, beautiful, SEO-optimized business websites that generate real inquiries — starting from just ₹4,999.</p>
+      <div class="lp-hero-btns">
+        <a href="https://wa.me/916300003773?text=Hi%2C%20I%27d%20like%20a%20free%20consultation%20for%20my%20business%20website." target="_blank" rel="noopener" class="btn-primary btn-lg btn-pulse">
+          <i class="fa-brands fa-whatsapp"></i> Get Free Consultation
+        </a>
+        <a href="#lp-pricing" class="btn-secondary btn-lg">
+          <i class="fa-solid fa-tag"></i> View Pricing
+        </a>
+      </div>
+      <div class="lp-trust-row">
+        <div class="lp-trust-item"><i class="fa-solid fa-check-circle"></i> No Hidden Charges</div>
+        <div class="lp-trust-item"><i class="fa-solid fa-check-circle"></i> Delivered in 7–14 Days</div>
+        <div class="lp-trust-item"><i class="fa-solid fa-check-circle"></i> Mobile Friendly</div>
+        <div class="lp-trust-item"><i class="fa-solid fa-check-circle"></i> SEO Optimized</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="ba-section" style="background:linear-gradient(135deg,rgba(0,212,255,0.03),rgba(124,58,237,0.03));border-top:1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:50px;">
+        <span class="section-tag">Business Impact</span>
+        <h2 class="section-title">Before & After <span class="gradient-text">Having a Website</span></h2>
+        <p class="section-sub">See how a professional website transforms your business</p>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-card ba-before reveal-left">
+          <span class="ba-label">Before — No Website</span>
+          <h3>Struggling to Get Customers</h3>
+          <ul class="ba-list">
+            <li><i class="fa-solid fa-xmark"></i> No online presence — hard to find</li>
+            <li><i class="fa-solid fa-xmark"></i> Losing customers to competitors</li>
+            <li><i class="fa-solid fa-xmark"></i> Depending only on word-of-mouth</li>
+            <li><i class="fa-solid fa-xmark"></i> No credibility for new customers</li>
+            <li><i class="fa-solid fa-xmark"></i> Missing out on Google searches</li>
+            <li><i class="fa-solid fa-xmark"></i> Limited working hours for inquiries</li>
+          </ul>
+        </div>
+        <div class="ba-arrow reveal"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="ba-card ba-after reveal-right">
+          <span class="ba-label">After — AlphaDevs Website</span>
+          <h3>Growing Business Online</h3>
+          <ul class="ba-list">
+            <li><i class="fa-solid fa-check"></i> Visible on Google 24/7</li>
+            <li><i class="fa-solid fa-check"></i> Professional image builds trust instantly</li>
+            <li><i class="fa-solid fa-check"></i> Customers find you easily online</li>
+            <li><i class="fa-solid fa-check"></i> Credibility that converts visitors to buyers</li>
+            <li><i class="fa-solid fa-check"></i> Ranking for local search keywords</li>
+            <li><i class="fa-solid fa-check"></i> 24/7 inquiry form & WhatsApp leads</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section style="padding:80px 0;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:50px;">
+        <span class="section-tag">Why You Need a Website</span>
+        <h2 class="section-title">Benefits of Having a <span class="gradient-text">Business Website</span></h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal-scale">
+          <div class="benefit-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Get Found on Google</h3>
+          <p>93% of online experiences begin with a search engine. A website lets customers find your business when they're ready to buy.</p>
+        </div>
+        <div class="benefit-card reveal-scale">
+          <div class="benefit-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>24/7 Sales Machine</h3>
+          <p>Your website works while you sleep. Customers can browse your services, get information, and contact you at any time.</p>
+        </div>
+        <div class="benefit-card reveal-scale">
+          <div class="benefit-icon"><i class="fa-solid fa-trophy"></i></div>
+          <h3>Beat Your Competitors</h3>
+          <p>If your competitors have a website and you don't, customers will choose them. A website gives you a professional edge.</p>
+        </div>
+        <div class="benefit-card reveal-scale">
+          <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Build Trust & Credibility</h3>
+          <p>75% of users judge a business's credibility based on their website. A professional website makes you look established and trustworthy.</p>
+        </div>
+        <div class="benefit-card reveal-scale">
+          <div class="benefit-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Increase Revenue</h3>
+          <p>Businesses with websites see an average 15–50% increase in revenue compared to those without an online presence.</p>
+        </div>
+        <div class="benefit-card reveal-scale">
+          <div class="benefit-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>Reach More Customers</h3>
+          <p>Expand beyond local word-of-mouth. Reach customers across your city, state, or even internationally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="lp-pricing" style="background:linear-gradient(135deg,rgba(0,212,255,0.05),rgba(124,58,237,0.05));border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);padding:80px 0;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:50px;">
+        <span class="section-tag">Transparent Pricing</span>
+        <h2 class="section-title">Simple, <span class="gradient-text">Affordable Plans</span></h2>
+        <p class="section-sub">No hidden costs. Quality websites at prices that make sense for Indian businesses.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal-scale">
+          <div class="pricing-badge">Starter</div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">₹4,999</span></div>
+          <p class="pricing-desc">Perfect for freelancers & small businesses.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Up to 5 Pages</li>
+            <li><i class="fa-solid fa-check"></i> Mobile Responsive</li>
+            <li><i class="fa-solid fa-check"></i> Contact Form + WhatsApp</li>
+            <li><i class="fa-solid fa-check"></i> Basic SEO Setup</li>
+            <li><i class="fa-solid fa-check"></i> 7-Day Delivery</li>
+          </ul>
+          <a href="https://wa.me/916300003773?text=Hi%2C%20I%27m%20interested%20in%20the%20Starter%20package." target="_blank" class="btn-secondary pricing-btn">Get Started <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="pricing-card pricing-card--popular reveal-scale">
+          <div class="pricing-popular-badge">⭐ Most Popular</div>
+          <div class="pricing-badge">Business</div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">₹9,999</span></div>
+          <p class="pricing-desc">For growing businesses that want more leads.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Up to 10 Pages</li>
+            <li><i class="fa-solid fa-check"></i> Premium Design</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp + Call Integration</li>
+            <li><i class="fa-solid fa-check"></i> Full SEO Optimization</li>
+            <li><i class="fa-solid fa-check"></i> Google Maps</li>
+            <li><i class="fa-solid fa-check"></i> 30-Day Support</li>
+          </ul>
+          <a href="https://wa.me/916300003773?text=Hi%2C%20I%27m%20interested%20in%20the%20Business%20package." target="_blank" class="btn-primary pricing-btn">Get Started <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="pricing-card reveal-scale">
+          <div class="pricing-badge">Premium</div>
+          <div class="pricing-price"><span class="price-from">Starting from</span><span class="price-amount">₹19,999</span></div>
+          <p class="pricing-desc">For established businesses with complex needs.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited Pages</li>
+            <li><i class="fa-solid fa-check"></i> Backend + Database</li>
+            <li><i class="fa-solid fa-check"></i> Admin Dashboard</li>
+            <li><i class="fa-solid fa-check"></i> Advanced SEO</li>
+            <li><i class="fa-solid fa-check"></i> 60-Day Support</li>
+          </ul>
+          <a href="https://wa.me/916300003773?text=Hi%2C%20I%27m%20interested%20in%20the%20Premium%20package." target="_blank" class="btn-secondary pricing-btn">Get Started <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="pricing-card pricing-card--custom reveal-scale">
+          <div class="pricing-badge">Custom</div>
+          <div class="pricing-price"><span class="price-amount" style="font-size:28px;">Contact Us</span></div>
+          <p class="pricing-desc">E-commerce, mobile apps, AI, SaaS, and more.</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> E-Commerce Stores</li>
+            <li><i class="fa-solid fa-check"></i> Mobile Apps</li>
+            <li><i class="fa-solid fa-check"></i> AI Integration</li>
+            <li><i class="fa-solid fa-check"></i> Custom Requirements</li>
+          </ul>
+          <a href="https://wa.me/916300003773?text=Hi%2C%20I%20have%20a%20custom%20project." target="_blank" class="btn-primary pricing-btn">Discuss Project <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <p class="pricing-note reveal">* Prices are starting points. Final pricing depends on requirements. Contact for a free custom quote.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding:80px 0;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:50px;">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+      </div>
+      <!-- Live reviews from backend -->
+      <div class="testimonials-grid" id="reviewsGrid">
+        <div class="reviews-loading"><i class="fa-solid fa-spinner fa-spin"></i><span>Loading reviews...</span></div>
+      </div>
+      <div class="reviews-empty" id="reviewsEmpty" style="display:none;">
+        <i class="fa-regular fa-comment-dots"></i>
+        <p>Be the first to leave a review!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:linear-gradient(135deg,rgba(124,58,237,0.04),rgba(0,212,255,0.04));border-top:1px solid var(--color-border);padding:80px 0;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:50px;">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      </div>
+      <div class="faq-list" style="max-width:780px;margin:0 auto;">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false"><span>How much does a business website cost in Hyderabad?</span><i class="fa-solid fa-plus faq-icon"></i></button>
+          <div class="faq-answer"><p>A basic business website starts from ₹4,999. Business websites with premium design and full SEO start at ₹9,999. The final cost depends on your requirements. We offer free consultation and custom quotes.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false"><span>How long does it take to build my website?</span><i class="fa-solid fa-plus faq-icon"></i></button>
+          <div class="faq-answer"><p>A basic website is delivered in 7 days. Business websites take 14 days. We guarantee delivery on the promised date.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false"><span>Will my website work on mobile phones?</span><i class="fa-solid fa-plus faq-icon"></i></button>
+          <div class="faq-answer"><p>Yes! Every website is 100% mobile responsive. Over 70% of Indian internet users are on mobile, so we ensure perfect performance on all devices.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false"><span>Will my website appear on Google?</span><i class="fa-solid fa-plus faq-icon"></i></button>
+          <div class="faq-answer"><p>Yes. All our websites are built with proper SEO structure. We also submit your website to Google Search Console and optimize meta tags, headings, and page speed to help you rank faster.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false"><span>Do you provide support after the website is launched?</span><i class="fa-solid fa-plus faq-icon"></i></button>
+          <div class="faq-answer"><p>Yes! We provide 30–60 days of free support for bug fixes. Monthly maintenance plans are also available.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="padding:80px 0;text-align:center;">
+    <div class="container">
+      <div class="reveal" style="max-width:700px;margin:0 auto;">
+        <h2 style="font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.2;margin-bottom:16px;">
+          Ready to Take Your Business <span class="gradient-text">Online Today?</span>
+        </h2>
+        <p style="font-size:16px;color:var(--color-text-muted);line-height:1.7;margin-bottom:36px;">
+          Get a free consultation. No commitment, no pressure. We'll understand your needs and suggest the best solution.
+        </p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="https://wa.me/916300003773?text=Hi%2C%20I%27d%20like%20a%20free%20consultation%20for%20my%20business%20website." target="_blank" rel="noopener" class="btn-primary btn-lg btn-pulse">
+            <i class="fa-brands fa-whatsapp"></i> Get Free Consultation
+          </a>
+          <a href="tel:+916300003773" class="btn-secondary btn-lg">
+            <i class="fa-solid fa-phone"></i> Call +91 6300003773
+          </a>
+        </div>
+        <p style="font-size:13px;color:var(--color-text-muted);margin-top:20px;">
+          📍 Hyderabad, Telangana &nbsp;|&nbsp; ✉️ vsmakkalvar@gmail.com &nbsp;|&nbsp; Response within 2 hours
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMPLE FOOTER -->
+  <footer style="padding:24px 20px;text-align:center;border-top:1px solid var(--color-border);">
+    <p style="font-size:13px;color:var(--color-text-muted);">
+      © 2025 <strong>AlphaDevs</strong> — Website Development Company, Hyderabad &nbsp;|&nbsp;
+      <a href="index.html" style="color:var(--color-primary);text-decoration:none;">Home</a> &nbsp;|&nbsp;
+      <a href="index.html#contact" style="color:var(--color-primary);text-decoration:none;">Contact</a>
+    </p>
+  </footer>
+
+  <!-- STICKY CTA BAR -->
+  <div class="lp-sticky-cta">
+    <p>🚀 Get a FREE website consultation — <strong>starting from ₹4,999</strong></p>
+    <a href="https://wa.me/916300003773?text=Hi%2C%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn-primary btn-pulse" style="padding:10px 20px;font-size:13px;">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+    </a>
+    <a href="tel:+916300003773" class="btn-secondary" style="padding:10px 16px;font-size:13px;">
+      <i class="fa-solid fa-phone"></i> Call
+    </a>
+  </div>
+
+  <script src="reviews.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => obs.observe(el));
+
+    // Testimonial card reveal
+    const grid = document.getElementById('reviewsGrid');
+    if (grid) {
+      const mObs = new MutationObserver(() => {
+        grid.querySelectorAll('.testimonial-card:not(.visible)').forEach((c, i) => {
+          setTimeout(() => c.classList.add('visible'), i * 100);
+        });
+      });
+      mObs.observe(grid, { childList: true });
+    }
+  </script>
+</body>
+</html>
